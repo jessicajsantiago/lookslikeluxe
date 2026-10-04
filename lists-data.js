@@ -9,14 +9,14 @@ window.LLL = {
       title: "Cozy Fall Living Room Finds",
       intro: "Warm neutral decor that looks designer, all on Amazon. Tap any item to shop.",
       products: [
-        { asin: "B0BXPF5D4T", name: "Bigacogo chunky knit chenille throw blanket", note: "The cozy-layer piece.", image: "" },
-        { asin: "B0FX9N2PJY", name: "OBright Dune rechargeable cordless table lamp", note: "Warm glow, no outlet needed.", image: "" },
-        { asin: "B0DK34N88L", name: "Hanobe tall floor vase", note: "Sculptural shape, neutral glaze.", image: "" },
-        { asin: "B0DK7CNW67", name: "Dried flower bouquet arrangement set", note: "Fill the vase with soft, natural texture.", image: "" },
-        { asin: "B09LQB2PR2", name: "Hanobe rustic wooden serving tray", note: "Corral candles and pumpkins on the coffee table.", image: "" },
-        { asin: "B0F8QQ7L31", name: "DN DECONATION fall pumpkin decorations", note: "Subtle fall without the orange.", image: "" },
-        { asin: "B0C3B5JRRM", name: "Fancy Homi decorative terracotta pillow covers", note: "Swap covers by season.", image: "" },
-        { asin: "B0D7VNJ1VG", name: "Woho amber glass taper candle holders", note: "Warm amber glow for the mantel or tray.", image: "" }
+        { asin: "B0BXPF5D4T", name: "Bigacogo chunky knit chenille throw blanket", note: "The cozy-layer piece.", image: "images/cozy-fall/01-throw-blanket.jpg" },
+        { asin: "B0FX9N2PJY", name: "OBright Dune rechargeable cordless table lamp", note: "Warm glow, no outlet needed.", image: "images/cozy-fall/02-table-lamp.jpg" },
+        { asin: "B0DK34N88L", name: "Hanobe tall floor vase", note: "Sculptural shape, neutral glaze.", image: "images/cozy-fall/03-vase.jpg" },
+        { asin: "B0DK7CNW67", name: "Dried flower bouquet arrangement set", note: "Fill the vase with soft, natural texture.", image: "images/cozy-fall/04-dried-flowers.jpg" },
+        { asin: "B09LQB2PR2", name: "Hanobe rustic wooden serving tray", note: "Corral candles and pumpkins on the coffee table.", image: "images/cozy-fall/05-wood-tray.jpg" },
+        { asin: "B0F8QQ7L31", name: "DN DECONATION fall pumpkin decorations", note: "Subtle fall without the orange.", image: "images/cozy-fall/06-pumpkins.jpg" },
+        { asin: "B0C3B5JRRM", name: "Fancy Homi decorative terracotta pillow covers", note: "Swap covers by season.", image: "images/cozy-fall/07-pillow-covers.jpg" },
+        { asin: "B0D7VNJ1VG", name: "Woho amber glass taper candle holders", note: "Warm amber glow for the mantel or tray.", image: "images/cozy-fall/08-candle-holders.jpg" }
       ]
     },
     "modern-neutral-living-room": {
