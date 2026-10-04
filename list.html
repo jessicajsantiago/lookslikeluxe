@@ -11,7 +11,7 @@
 <div class="disclosure">As an Amazon Associate I earn from qualifying purchases. Prices and availability are shown on Amazon.</div>
 <header class="site"><a class="brand" href="index.html">Looks Like <em>Luxe</em></a></header>
 <main class="wrap">
-  <section class="hero"><h1 id="t"></h1><p id="i"></p></section>
+  <section class="hero"><span class="eyebrow">Hand-picked Amazon finds</span><h1 id="t"></h1><p id="i"></p><div class="pills"><span id="c"></span><span>Tap any item to shop on Amazon</span></div></section>
   <section class="grid" id="g"></section>
   <section class="more"><h2>More finds</h2><div id="m"></div></section>
 </main>
@@ -26,6 +26,7 @@
   document.title=L.title+' | Looks Like Luxe';
   document.getElementById('t').textContent=L.title;
   document.getElementById('i').textContent=L.intro;
+  document.getElementById('c').textContent=L.products.length+' finds';
   var g=document.getElementById('g');
   L.products.forEach(function(p,n){
     var a=document.createElement('article');a.className='card';
