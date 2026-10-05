@@ -58,7 +58,7 @@ def build_post(p):
             f'<main class="b-wrap"><div class="b-note"><strong>Affiliate disclosure:</strong> {e(p["disclosure"])}</div>'
             f'<div class="b-intro">{intro}</div><div class="b-sep">&#9830; &#9830; &#9830;</div>{"".join(prods)}'
             f'<div class="b-sep">&#9830; &#9830; &#9830;</div><div class="b-outro">{outro}<div class="b-sign">xx, Looks Like Luxe</div></div>'
-            f'<section class="b-signup"><h2>Get the Luxe Holiday Gift Guide, free</h2><p>25 gifts that look like you spent way more, plus one fun email a week with the prettiest finds. Zero spam. Zero sad candles.</p><div class="form">{GHL_FORM}</div></section>'
+            f'<section class="b-signup"><h2>Get The Luxe Gift Vault, free</h2><p>A printable holiday gift planner plus 25 gifts that look like you spent way more, and one fun email a week. Zero spam. Zero sad candles.</p><div class="form">{GHL_FORM}</div></section>'
             f'<section class="b-related"><h3>Keep reading</h3>{related}</section></main>' + footer())
     return page(p["seo_title"], p["description"], body, f'/blog/{p["slug"]}.html', p.get("pin_image"))
 

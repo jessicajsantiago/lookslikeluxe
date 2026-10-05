@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Luxe Gift Vault | Looks Like Luxe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<style>
+@page{size:8.5in 11in;margin:0}
+:root{--choc:#2b1a12;--gold:#c9a25e;--gold2:#e6c98a;--cream:#faf4ea;--ink:#2a2018;--muted:#7a6a5a;--line:#d9c9a8}
+*{box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+html,body{margin:0;padding:0;background:#fff}
+body{font-family:"Cormorant Garamond",Georgia,serif;color:var(--ink);font-size:16pt;line-height:1.5}
+.pg{width:8.5in;height:11in;position:relative;overflow:hidden;page-break-after:always;background:var(--cream);padding:.7in .75in}
+.pg:last-child{page-break-after:auto}
+.dark{background:var(--choc) url(../images/blog/pattern.png) repeat;background-size:1.6in;color:#fff}
+.dark:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(43,26,18,.45),rgba(43,26,18,.93))}
+.dark>*{position:relative}
+.kick{font:600 8.5pt "Montserrat",Arial,sans-serif;letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:500;margin:0}
+.dark h1{color:var(--gold);font-size:50pt;line-height:1.05}
+h2{font-size:30pt;color:var(--choc);line-height:1.1}
+h3{font-size:15pt;color:var(--choc)}
+.rule{width:1.3in;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:.16in 0}
+.center{text-align:center}
+.frame{position:absolute;inset:.28in;border:1.2px solid var(--gold);pointer-events:none}
+.foot{position:absolute;left:0;right:0;bottom:.32in;text-align:center;font:500 7.5pt "Montserrat",Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.dark .foot{color:#cdbd9f}
+p{margin:0 0 .12in}
+.sass{font-style:italic;color:var(--muted)}
+/* lines */
+.ln{border-bottom:1px solid var(--line);height:.4in}
+.row{display:flex;gap:.12in;align-items:flex-end}
+.lbl{font:600 7pt "Montserrat",Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8a6a2e;white-space:nowrap}
+.field{display:flex;align-items:flex-end;gap:.08in;border-bottom:1px solid var(--line);height:.4in}
+.field .lbl{padding-bottom:3px}
+/* tables */
+table{width:100%;border-collapse:collapse}
+th{font:600 7pt "Montserrat",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);background:var(--choc);padding:7px 8px;text-align:left}
+td{border-bottom:1px solid var(--line);height:.48in;padding:0 8px;font-size:12pt}
+td.box{width:.4in;text-align:center}
+.box i{display:inline-block;width:.15in;height:.15in;border:1px solid var(--gold);border-radius:2px}
+/* person card */
+.card{border:1px solid var(--line);background:#fffdf8;border-radius:4px;padding:.12in .18in .08in;margin-bottom:.16in}
+.card h3{font-size:13pt}
+/* checklist */
+.ck{display:flex;gap:.12in;align-items:flex-start;margin-bottom:.13in;font-size:14.5pt}
+.ck i{flex:0 0 .17in;height:.17in;margin-top:.05in;border:1.2px solid var(--gold);border-radius:3px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:.3in}
+.rulebox{border-left:3px solid var(--gold);padding:.05in 0 .05in .18in;margin-bottom:.2in}
+.rulebox b{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:500;font-size:17pt;color:var(--choc)}
+.tag{display:inline-block;font:600 7pt "Montserrat",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;background:rgba(201,162,94,.2);color:#8a6a2e;padding:3px 9px;border-radius:99px;margin-right:6px}
+.week{display:flex;gap:.14in;border-bottom:1px solid var(--line);padding:.14in 0}
+.week b{flex:0 0 1.35in;font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:500;color:var(--choc);font-size:14pt}
+</style>
+</head>
+<body>
+
+<!-- 1 COVER -->
+<section class="pg dark center" style="padding-top:1.5in">
+  <img src="../images/brand/ll-badge.png" style="width:1.6in;height:1.6in;border-radius:50%;border:2px solid var(--gold);box-shadow:0 0 0 7px rgba(201,162,94,.2)">
+  <div class="kick" style="margin-top:.4in">Looks Like Luxe presents</div>
+  <h1 style="margin-top:.2in">The Luxe<br>Gift Vault</h1>
+  <div class="rule" style="margin:.3in auto"></div>
+  <p style="font-size:16pt;font-style:italic;color:#eadcc2;max-width:5in;margin:0 auto">Your holiday gift planner. For women with excellent taste, limited time, and a group chat that expects miracles.</p>
+  <div class="kick" style="position:absolute;left:0;right:0;bottom:.8in">Holiday 2026 &nbsp;&middot;&nbsp; Rich-girl taste, real-girl budget</div>
+  <div class="frame"></div>
+</section>
+
+<!-- 2 WELCOME -->
+<section class="pg">
+  <div class="frame"></div>
+  <div class="kick">A note before we begin</div>
+  <h2 style="margin-top:.1in">Darling, sit down.</h2>
+  <div class="rule"></div>
+  <p>I couldn't help but wonder: when did buying gifts for everyone you know become a full-time job with no benefits?</p>
+  <p>Somewhere between Halloween candy and the first Mariah Carey sighting, your brain goes blank. Your cart is full of nonsense. And your budget? Let's just say it left the chat.</p>
+  <p>So I made you this. The Luxe Gift Vault is where the list lives, the money behaves, and every gift gets bought before the panic sets in. Print it, fill it out with your prettiest pen, and tuck it somewhere dramatic.</p>
+  <p>Here's what's inside:</p>
+  <div class="two" style="margin-top:.1in">
+    <div>
+      <div class="ck"><i></i><span>The Rules of Gifting (non-negotiable)</span></div>
+      <div class="ck"><i></i><span>Your master budget</span></div>
+      <div class="ck"><i></i><span>Gift lists by person</span></div>
+    </div>
+    <div>
+      <div class="ck"><i></i><span>The countdown calendar</span></div>
+      <div class="ck"><i></i><span>Wrapping and finishing touches</span></div>
+      <div class="ck"><i></i><span>The thank-you hit list</span></div>
+    </div>
+  </div>
+  <p class="sass" style="margin-top:.2in">Dramatic? Yes. Helpful? Obviously. You're welcome.</p>
+  <p style="margin-top:.3in;font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:18pt;color:var(--gold)">xx, Looks Like Luxe</p>
+  <div class="foot">The Luxe Gift Vault &nbsp;&middot;&nbsp; Looks Like Luxe</div>
+</section>
+
+<!-- 3 RULES -->
+<section class="pg">
+  <div class="frame"></div>
+  <div class="kick">Non-negotiable</div>
+  <h2 style="margin-top:.1in">The Rules of Gifting</h2>
+  <div class="rule"></div>
+  <div class="rulebox"><b>1. Decide the budget first.</b><br>Feelings are free. Gifts are not. Set the number before you open a single tab.</div>
+  <div class="rulebox"><b>2. Shop for her, not for the algorithm.</b><br>A gift that makes her gasp beats three that make her say "oh, thanks."</div>
+  <div class="rulebox"><b>3. The wow factor is mandatory.</b><br>If a grown woman wouldn't say "wait, they make THIS?", keep scrolling. No generic mugs. We have standards.</div>
+  <div class="rulebox"><b>4. Buy the hard ones first.</b><br>Your brother, your mother-in-law, the coworker who "doesn't want anything." Handle them in October like the professional you are.</div>
+  <div class="rulebox"><b>5. Check the shipping dates, always.</b><br>Cutoffs change every year. Look up your carriers' current deadlines, write them on the calendar page, and trust no one.</div>
+  <div class="rulebox"><b>6. Presentation is half the gift.</b><br>A ribbon and a handwritten note make a $25 present look like it came from somewhere fancy.</div>
+  <div class="rulebox"><b>7. Keep one spare gift in the closet.</b><br>For the surprise guest, the "oh no, we exchange?" coworker, and your own dignity.</div>
+  <div class="foot">The Luxe Gift Vault &nbsp;&middot;&nbsp; Looks Like Luxe</div>
+</section>
+
+<!-- 4 BUDGET -->
+<section class="pg">
+  <div class="frame"></div>
+  <div class="kick">Money talk</div>
+  <h2 style="margin-top:.1in">The Master Budget</h2>
+  <div class="rule"></div>
+  <div class="row" style="margin-bottom:.14in">
+    <div class="field" style="flex:1"><span class="lbl">Total gift budget</span></div>
+    <div class="field" style="flex:1"><span class="lbl">Spent so far</span></div>
+    <div class="field" style="flex:1"><span class="lbl">Remaining</span></div>
+  </div>
+  <p class="sass">Budget? Never heard of her. (Fill it in anyway. Future you will send flowers.)</p>
+  <table>
+    <tr><th>Person</th><th>Budget</th><th>Spent</th><th class="box">Bought</th><th class="box">Wrapped</th><th class="box">Sent</th></tr>
+    <tr><td></td><td></td><td></td><td class="box"><i></i></td><td class="box"><i></i></td><td class="box"><i></i></td></tr>
+    <tr><td></td><td></td><td></td><td class="box"><i></i></td><td class="box"><i></i></td><td class="box"><i></i></td></tr>
+    <tr><td></td><td></td><td></td><td class="box"><i></i></td><td class="box"><i></i></td><td class="box"><i></i></td></tr>
+    <tr><td></td><td></td><td></td><td class="box"><i></i></td><td class="box"><i></i></td><td class="box"><i></i></td></tr>
+    <tr><td></td><td></td><td></td><td class="box"><i></i></td><td class="box"><i></i></td><td class="box"><i></i></td></tr>
+    <tr><td></td><td></td><td></td><td class="box"><i></i></td><td class="box"><i></i></td><td class="box"><i></i></td></tr>
+    <tr><td></td><td></td><td></td><td class="box"><i></i></td><td class="box"><i></i></td><td class="box"><i></i></td></tr>
+    <tr><td></td><td></td><td></td><td class="box"><i></i></td><td class="box"><i></i></td><td class="box"><i></i></td></tr>
+    <tr><td></td><td></td><td></td><td class="box"><i></i></td><td class="box"><i></i></td><td class="box"><i></i></td></tr>
+    <tr><td></td><td></td><td></td><td class="box"><i></i></td><td class="box"><i></i></td><td class="box"><i></i></td></tr>
+    <tr><td></td><td></td><td></td><td class="box"><i></i></td><td class="box"><i></i></td><td class="box"><i></i></td></tr>
+    <tr><td></td><td></td><td></td><td class="box"><i></i></td><td class="box"><i></i></td><td class="box"><i></i></td></tr>
+    <tr><td></td><td></td><td></td><td class="box"><i></i></td><td class="box"><i></i></td><td class="box"><i></i></td></tr>
+  </table>
+  <div class="foot">The Luxe Gift Vault &nbsp;&middot;&nbsp; Looks Like Luxe</div>
+</section>
+
+<!-- 5-6 PERSON PAGES -->
+<section class="pg">
+  <div class="frame"></div>
+  <div class="kick">The list</div>
+  <h2 style="margin-top:.08in">Who's Getting What</h2>
+  <div class="rule"></div>
+  <div class="card"><div class="field"><span class="lbl">Name</span></div><div class="field"><span class="lbl">Loves</span></div><div class="field"><span class="lbl">Gift idea</span></div><div class="row"><div class="field" style="flex:1"><span class="lbl">Budget</span></div><div class="field" style="flex:1"><span class="lbl">Where to buy</span></div></div></div>
+  <div class="card"><div class="field"><span class="lbl">Name</span></div><div class="field"><span class="lbl">Loves</span></div><div class="field"><span class="lbl">Gift idea</span></div><div class="row"><div class="field" style="flex:1"><span class="lbl">Budget</span></div><div class="field" style="flex:1"><span class="lbl">Where to buy</span></div></div></div>
+  <div class="card"><div class="field"><span class="lbl">Name</span></div><div class="field"><span class="lbl">Loves</span></div><div class="field"><span class="lbl">Gift idea</span></div><div class="row"><div class="field" style="flex:1"><span class="lbl">Budget</span></div><div class="field" style="flex:1"><span class="lbl">Where to buy</span></div></div></div>
+  <div class="card"><div class="field"><span class="lbl">Name</span></div><div class="field"><span class="lbl">Loves</span></div><div class="field"><span class="lbl">Gift idea</span></div><div class="row"><div class="field" style="flex:1"><span class="lbl">Budget</span></div><div class="field" style="flex:1"><span class="lbl">Where to buy</span></div></div></div>
+  <div class="foot">The Luxe Gift Vault &nbsp;&middot;&nbsp; Looks Like Luxe</div>
+</section>
+<section class="pg">
+  <div class="frame"></div>
+  <div class="kick">The list, continued</div>
+  <h2 style="margin-top:.08in">More People, More Drama</h2>
+  <div class="rule"></div>
+  <div class="card"><div class="field"><span class="lbl">Name</span></div><div class="field"><span class="lbl">Loves</span></div><div class="field"><span class="lbl">Gift idea</span></div><div class="row"><div class="field" style="flex:1"><span class="lbl">Budget</span></div><div class="field" style="flex:1"><span class="lbl">Where to buy</span></div></div></div>
+  <div class="card"><div class="field"><span class="lbl">Name</span></div><div class="field"><span class="lbl">Loves</span></div><div class="field"><span class="lbl">Gift idea</span></div><div class="row"><div class="field" style="flex:1"><span class="lbl">Budget</span></div><div class="field" style="flex:1"><span class="lbl">Where to buy</span></div></div></div>
+  <div class="card"><div class="field"><span class="lbl">Name</span></div><div class="field"><span class="lbl">Loves</span></div><div class="field"><span class="lbl">Gift idea</span></div><div class="row"><div class="field" style="flex:1"><span class="lbl">Budget</span></div><div class="field" style="flex:1"><span class="lbl">Where to buy</span></div></div></div>
+  <div class="card"><div class="field"><span class="lbl">Name</span></div><div class="field"><span class="lbl">Loves</span></div><div class="field"><span class="lbl">Gift idea</span></div><div class="row"><div class="field" style="flex:1"><span class="lbl">Budget</span></div><div class="field" style="flex:1"><span class="lbl">Where to buy</span></div></div></div>
+  <div class="foot">The Luxe Gift Vault &nbsp;&middot;&nbsp; Looks Like Luxe</div>
+</section>
+
+<!-- 7 WHERE TO START -->
+<section class="pg">
+  <div class="frame"></div>
+  <div class="kick">Stuck?</div>
+  <h2 style="margin-top:.1in">Where to Start, Per Person</h2>
+  <div class="rule"></div>
+  <p class="sass">For the moments when your mind is a blank and your mother's birthday is Tuesday.</p>
+  <div class="rulebox"><b>Mom.</b> Something that says "you deserve a spa day" without the appointment. Silky, cozy, or deliciously scented.</div>
+  <div class="rulebox"><b>The bestie.</b> A little luxury she'd never buy herself. Bonus points if it photographs well.</div>
+  <div class="rulebox"><b>The hostess.</b> Anything that looks effortless on her table and is not a bottle of wine.</div>
+  <div class="rulebox"><b>The teacher or coworker.</b> Thoughtful, pretty, zero awkward. Think small luxuries for desks and mugs.</div>
+  <div class="rulebox"><b>The little girl.</b> One thing that makes the other children gasp. No crayons. We've discussed.</div>
+  <div class="rulebox"><b>The man who says "I don't need anything."</b> He does. Pick something he'd never ask for and will secretly use daily.</div>
+  <div class="rulebox"><b>Yourself.</b> Add one line to the budget for you. A gift list without a self-gift is a hostage situation.</div>
+  <p style="margin-top:.2in">Want wow-factor ideas that make grown women say "wait, they make THIS?" Browse <b>The Edit</b> at <b>lookslikeluxe.netlify.app/blog</b>. New guides drop all season.</p>
+  <div class="foot">The Luxe Gift Vault &nbsp;&middot;&nbsp; Looks Like Luxe</div>
+</section>
+
+<!-- 8 CALENDAR -->
+<section class="pg">
+  <div class="frame"></div>
+  <div class="kick">Do not panic</div>
+  <h2 style="margin-top:.1in">The Countdown Calendar</h2>
+  <div class="rule"></div>
+  <div class="week"><b>Right now</b><span>Set the budget. Make the list. Buy the hard ones (hello, in-laws).</span></div>
+  <div class="week"><b>Late October</b><span>Order anything custom, monogrammed, or made to order. It takes longer than you think.</span></div>
+  <div class="week"><b>Early November</b><span>Finish the big purchases. Start collecting wrapping supplies before everyone else does.</span></div>
+  <div class="week"><b>Thanksgiving week</b><span>Watch for sales on gifts you've already chosen. Do not wander. Buy only what's on the list.</span></div>
+  <div class="week"><b>Early December</b><span>Last call for gifts that ship far away. Check your carriers' current holiday cutoff dates and write them below.</span></div>
+  <div class="week"><b>Mid December</b><span>Wrap everything. Write the cards. Pretend you are calm.</span></div>
+  <div class="week"><b>Week of the 25th</b><span>Deliver, hand over, and accept the compliments. You earned them.</span></div>
+  <h3 style="margin-top:.28in">Shipping deadlines I confirmed</h3>
+  <div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div>
+  <div class="foot">The Luxe Gift Vault &nbsp;&middot;&nbsp; Looks Like Luxe</div>
+</section>
+
+<!-- 9 WRAPPING -->
+<section class="pg">
+  <div class="frame"></div>
+  <div class="kick">The finishing touch</div>
+  <h2 style="margin-top:.1in">Wrap It Like You Mean It</h2>
+  <div class="rule"></div>
+  <p class="sass">A pretty ribbon turns a nice gift into a moment. Check these off as you go.</p>
+  <div class="two">
+    <div>
+      <h3>Supplies</h3><div style="height:.1in"></div>
+      <div class="ck"><i></i><span>Wrapping paper (one pretty, one neutral)</span></div>
+      <div class="ck"><i></i><span>Ribbon, in gold if you can</span></div>
+      <div class="ck"><i></i><span>Gift tags and a good pen</span></div>
+      <div class="ck"><i></i><span>Tissue paper</span></div>
+      <div class="ck"><i></i><span>Tape (the invisible kind)</span></div>
+      <div class="ck"><i></i><span>Scissors that are not hidden by a child</span></div>
+    </div>
+    <div>
+      <h3>The finishing touches</h3><div style="height:.1in"></div>
+      <div class="ck"><i></i><span>A handwritten note on every gift</span></div>
+      <div class="ck"><i></i><span>A sprig or a bow on top</span></div>
+      <div class="ck"><i></i><span>Receipts tucked in (gift receipts, always)</span></div>
+      <div class="ck"><i></i><span>Photos before you hand them over</span></div>
+      <div class="ck"><i></i><span>A "to be opened first" gift for yourself</span></div>
+    </div>
+  </div>
+  <h3 style="margin-top:.28in">Notes for my cards</h3>
+  <div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div>
+  <div class="foot">The Luxe Gift Vault &nbsp;&middot;&nbsp; Looks Like Luxe</div>
+</section>
+
+<!-- 10 THANK YOU HIT LIST -->
+<section class="pg">
+  <div class="frame"></div>
+  <div class="kick">Etiquette, darling</div>
+  <h2 style="margin-top:.1in">The Thank-You Hit List</h2>
+  <div class="rule"></div>
+  <p class="sass">Who gave you what, and who is getting a note by Friday. Gratitude is chic.</p>
+  <table>
+    <tr><th>From</th><th>What they gave</th><th class="box">Note sent</th></tr>
+    <tr><td></td><td></td><td class="box"><i></i></td></tr><tr><td></td><td></td><td class="box"><i></i></td></tr><tr><td></td><td></td><td class="box"><i></i></td></tr><tr><td></td><td></td><td class="box"><i></i></td></tr><tr><td></td><td></td><td class="box"><i></i></td></tr><tr><td></td><td></td><td class="box"><i></i></td></tr><tr><td></td><td></td><td class="box"><i></i></td></tr><tr><td></td><td></td><td class="box"><i></i></td></tr><tr><td></td><td></td><td class="box"><i></i></td></tr><tr><td></td><td></td><td class="box"><i></i></td></tr><tr><td></td><td></td><td class="box"><i></i></td></tr><tr><td></td><td></td><td class="box"><i></i></td></tr><tr><td></td><td></td><td class="box"><i></i></td></tr>
+  </table>
+  <div class="foot">The Luxe Gift Vault &nbsp;&middot;&nbsp; Looks Like Luxe</div>
+</section>
+
+<!-- 11 NOTES -->
+<section class="pg">
+  <div class="frame"></div>
+  <div class="kick">Brain dump</div>
+  <h2 style="margin-top:.1in">Ideas, Notes &amp; Scheming</h2>
+  <div class="rule"></div>
+  <div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div>
+  <div class="foot">The Luxe Gift Vault &nbsp;&middot;&nbsp; Looks Like Luxe</div>
+</section>
+
+<!-- 12 BACK COVER -->
+<section class="pg dark center" style="padding-top:2in">
+  <img src="../images/brand/ll-badge.png" style="width:1.2in;height:1.2in;border-radius:50%;border:2px solid var(--gold)">
+  <h1 style="font-size:34pt;margin-top:.35in">Gift like you mean it.</h1>
+  <div class="rule" style="margin:.28in auto"></div>
+  <p style="font-size:14.5pt;font-style:italic;color:#eadcc2;max-width:5in;margin:0 auto .2in">Find more wow-factor ideas, room refreshes and gift guides at</p>
+  <p style="font:600 11pt 'Montserrat',Arial,sans-serif;letter-spacing:.14em;color:var(--gold2)">LOOKSLIKELUXE.NETLIFY.APP</p>
+  <p style="font:500 9pt 'Montserrat',Arial,sans-serif;letter-spacing:.14em;color:#cdbd9f;margin-top:.12in">PINTEREST: @LOOKSLIKELUXE</p>
+  <p style="position:absolute;left:1in;right:1in;bottom:.7in;font:8pt/1.5 'Montserrat',Arial,sans-serif;color:#b8a98d">This planner is a free gift from Looks Like Luxe. Looks Like Luxe is a participant in the Amazon Services LLC Associates Program; some links on the website are affiliate links. No purchase is required to use this planner.</p>
+  <div class="frame"></div>
+</section>
+
+</body>
+</html>
