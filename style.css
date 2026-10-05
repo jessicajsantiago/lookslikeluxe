@@ -84,3 +84,9 @@ footer{padding:28px 16px 44px;text-align:center;color:var(--muted);font-size:12p
 @media (prefers-color-scheme:dark){.signup input{background:#2b241d;color:#f3eee6}.mini-signup a,.gift-card a{background:var(--gold);color:#111}.gg-hero{background:radial-gradient(ellipse at top,#3a2c1c,transparent 70%)}}
 .ghl-form{max-width:460px;min-height:434px;margin:0 auto;background:#fffaf2;border-radius:16px;padding:6px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
 .ghl-form iframe{min-height:434px;display:block}
+
+.cats{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.cats a{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:130px;padding:16px 22px;border:1px solid var(--gold);border-radius:18px;background:var(--card);color:var(--ink);text-decoration:none;font-family:Georgia,serif;font-size:18px;transition:transform .2s,box-shadow .2s}
+.cats a span{font-size:28px}
+.cats a:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(60,40,20,.14)}
+footer a{color:inherit}

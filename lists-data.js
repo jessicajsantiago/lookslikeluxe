@@ -19,6 +19,20 @@ window.LLL = {
         { asin: "B0D7VNJ1VG", name: "Woho amber ribbed glass taper candle holders (set of 3)", note: "Warm amber glow for the mantel or tray.", image: "images/cozy-fall/08-candle-holders.jpg" }
       ]
     },
+    "gifts-for-her": {
+      title: "Gifts for Her That Look Way More Expensive Than They Are",
+      intro: "Eight giftable finds with real luxe energy, from sleep sets to spa-night staples. Tap any item to shop.",
+      products: [
+        { asin: "B0FMNHRSQM", name: "3-pack silky satin sleep set (pillowcase, eye mask, scrunchie)", note: "The beauty-sleep gift that feels like a splurge.", image: "images/gifts-for-her/01-sleep-set.jpg" },
+        { asin: "B00394USWE", name: "NEST New York scented classic candle, Bamboo", note: "A glass-jar candle that looks right on any shelf.", image: "images/gifts-for-her/02-candle.jpg" },
+        { asin: "B07ZHC51DX", name: "BAGSMART travel jewelry organizer case", note: "Small enough for a stocking, pretty enough for a vanity.", image: "images/gifts-for-her/03-jewelry-case.jpg" },
+        { asin: "B0GTQS33Y7", name: "Sol de Janeiro Cheirosa perfume mist discovery set", note: "Three scents to layer and make her own.", image: "images/gifts-for-her/04-perfume-mist.jpg" },
+        { asin: "B01LZ2P06W", name: "Turquaz waffle knit spa robe", note: "Hotel-robe vibes for Sunday self-care.", image: "images/gifts-for-her/05-spa-robe.jpg" },
+        { asin: "B07T4GDPPW", name: "Hipiwe gold mirror glass vanity tray", note: "Corral perfume and jewelry like a stylist.", image: "images/gifts-for-her/06-vanity-tray.jpg" },
+        { asin: "B0CYCJLW42", name: "grace & stella skin care gift set", note: "A ready-to-wrap skincare treat.", image: "images/gifts-for-her/07-skincare-set.jpg" },
+        { asin: "B0D1G6H86V", name: "medicube Glass Skin collagen trial kit", note: "A mini glow-up kit for the skincare girl.", image: "images/gifts-for-her/08-glass-skin-kit.jpg" }
+      ]
+    },
     "modern-neutral-living-room": {
       hidden: true,
       title: "Modern Neutral Living Room Decor",
