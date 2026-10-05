@@ -16,6 +16,9 @@ SETS = {
     'gifts-for-her': ('images/gifts-for-her', 'AMAZON FINDS', ['Gifts for Her'], 'rich-girl taste. real-girl budget.', 'SHOP THE LIST'),
     'clean-girl': ('images/blog/clean-girl', 'AMAZON BEAUTY FINDS', ['Clean Girl', 'Beauty Finds'], '', 'SHOP THE LIST'),
     'host-hostess': ('images/blog/host-hostess', 'AMAZON FINDS', ['Host & Hostess', 'Gifts'], '', 'SHOP THE LIST'),
+    'gifts-5yo': ('images/blog/gifts-5yo', 'AMAZON TOY FINDS', ['Gifts for 5 Year', 'Old Girls'], '', 'SHOP THE LIST'),
+    'gifts-8-10': ('images/blog/gifts-8-10', 'AMAZON TWEEN FINDS', ['Gifts for 8-10', 'Year Old Girls'], '', 'SHOP THE LIST'),
+    'gifts-20s': ('images/blog/gifts-20s', 'AMAZON GIFT FINDS', ['Gifts for Women', 'in Their 20s'], '', 'SHOP THE LIST'),
     'cozy-fall': ('images/cozy-fall', 'AMAZON HOME FINDS', ['Cozy Fall', 'Home Decor'], 'looks designer. isn\'t.', 'SHOP THE LIST'),
 }
 
@@ -81,7 +84,7 @@ SLOTS = [(190, 520, 320, -4), (500, 490, 300, 2), (815, 530, 320, 4),
 
 def build(key, cream):
     folder, kicker, title, sub, cta = SETS[key]
-    files = sorted(glob.glob(folder + '/0*.jpg'))[:8]
+    files = sorted(glob.glob(folder + '/0*.jpg'))[:7 if key == 'gifts-8-10' else 8]   # 8-10 list is missing the roller skates (#8)
     bg = patbg(cream).convert('RGBA')
     ink = CHOC if cream else GOLD; ink2 = (122, 84, 52) if cream else (236, 214, 170)
     for i, (f, (cx, cy, sz, rot)) in enumerate(zip(files, SLOTS)):
