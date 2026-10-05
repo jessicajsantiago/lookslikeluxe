@@ -1,0 +1,69 @@
+/* Looks Like Luxe blog: chocolate, gold, cream. Playfair + Cormorant. */
+:root{--choc:#2b1a12;--choc2:#3a2418;--gold:#c9a25e;--gold2:#e6c98a;--cream:#faf4ea;--paper:#fffdf8;--ink:#2a2018;--muted:#7a6a5a;--line:#e8dcc6}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body.blog{margin:0;background:var(--cream);color:var(--ink);font-family:"Cormorant Garamond",Georgia,serif;font-size:21px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.blog a{color:inherit}
+.b-disc{background:var(--choc);color:#e9dcc3;font:12px/1.4 "Montserrat",Arial,sans-serif;letter-spacing:.08em;text-align:center;padding:9px 16px}
+.b-nav{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;padding:18px 20px}
+.b-brand{font-family:"Playfair Display",Georgia,serif;font-size:26px;letter-spacing:.08em;text-decoration:none}
+.b-brand em{color:var(--gold);font-style:italic}
+.b-nav nav a{font:12px "Montserrat",Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;margin-left:22px;color:var(--muted)}
+.b-nav nav a:hover{color:var(--gold)}
+/* hero */
+.b-hero{position:relative;color:#fff;text-align:center;padding:90px 20px 100px;background:var(--choc) url(/images/blog/pattern.png) repeat;background-size:235px}
+.b-hero:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(43,26,18,.55),rgba(43,26,18,.92))}
+.b-hero>*{position:relative}
+.b-kicker{font:600 12px "Montserrat",Arial,sans-serif;letter-spacing:.35em;text-transform:uppercase;color:var(--gold2)}
+.b-hero h1{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:500;color:var(--gold);font-size:clamp(38px,7vw,74px);line-height:1.08;max-width:900px;margin:18px auto}
+.b-rule{width:120px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:22px auto}
+.b-by{font:13px "Montserrat",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#e0d0b4}
+/* body */
+.b-wrap{max-width:760px;margin:0 auto;padding:0 22px}
+.b-note{margin:34px auto 0;padding:14px 18px;border:1px solid var(--line);border-left:3px solid var(--gold);background:var(--paper);font:13px/1.55 "Montserrat",Arial,sans-serif;color:var(--muted)}
+.b-intro{padding-top:30px}
+.b-intro p{margin:0 0 1.1em}
+.b-intro p:first-child:first-letter{font-family:"Playfair Display",Georgia,serif;font-size:4.6em;line-height:.85;float:left;margin:.05em .1em 0 0;color:var(--gold)}
+.b-intro p:first-child{font-size:1.18em}
+.b-sep{text-align:center;color:var(--gold);letter-spacing:.6em;margin:46px 0;font-size:18px}
+/* products */
+.b-prod{margin:0 0 70px}
+.b-prod .b-num{font-family:"Playfair Display",Georgia,serif;font-style:italic;color:var(--gold);font-size:72px;line-height:.9;margin:0 0 4px}
+.b-prod h2{font-family:"Playfair Display",Georgia,serif;font-weight:500;font-size:clamp(26px,4.4vw,36px);line-height:1.2;margin:4px 0 8px}
+.b-best{display:inline-block;font:600 11px "Montserrat",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8a6a2e;background:rgba(201,162,94,.16);padding:6px 12px;border-radius:999px;margin-bottom:16px}
+.b-photo{display:block;background:#fff;border:1px solid var(--line);border-radius:6px;padding:14px;margin:6px 0 20px;box-shadow:0 18px 40px rgba(60,40,20,.10)}
+.b-photo img{display:block;width:100%;height:auto;max-height:520px;object-fit:contain}
+.b-prod p{margin:0 0 1em}
+.b-prod p:last-of-type{font-style:italic}
+.b-btn{display:inline-block;font:600 13px "Montserrat",Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:var(--choc);background:var(--gold);padding:15px 30px;border-radius:999px;transition:transform .18s,background .18s;box-shadow:0 8px 20px rgba(201,162,94,.35)}
+.b-btn:hover{background:var(--gold2);transform:translateY(-2px)}
+/* pull quote */
+.b-quote{margin:20px -22px 70px;padding:56px 28px;text-align:center;background:var(--choc) url(/images/blog/pattern.png);background-size:235px;position:relative;color:var(--gold)}
+.b-quote:before{content:"";position:absolute;inset:0;background:rgba(43,26,18,.82)}
+.b-quote p{position:relative;font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:clamp(24px,4.4vw,38px);line-height:1.3;max-width:640px;margin:0 auto}
+/* outro, signup, related */
+.b-outro p{margin:0 0 1.1em}
+.b-sign{font-family:"Playfair Display",Georgia,serif;font-style:italic;color:var(--gold);font-size:30px;margin-top:28px}
+.b-signup{margin:60px 0;padding:42px 26px;text-align:center;color:#fff;background:linear-gradient(135deg,#2a1a12,#4b2f20 65%,#a8864f);border-radius:6px}
+.b-signup h2{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(26px,5vw,38px);margin:0 0 8px;color:var(--gold2)}
+.b-signup p{margin:0 auto 18px;max-width:520px;font-size:19px;color:#f1e6d6}
+.b-signup .form{max-width:460px;min-height:434px;margin:0 auto;background:#fffaf2;border-radius:10px;padding:6px}
+.b-signup iframe{width:100%;min-height:434px;border:0;display:block}
+.b-related{border-top:1px solid var(--line);padding:34px 0 10px;text-align:center}
+.b-related h3{font:600 12px "Montserrat",Arial,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+.b-related a{display:block;font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:22px;text-decoration:none;margin:8px 0;color:var(--ink)}
+.b-related a:hover{color:var(--gold)}
+footer.b-foot{margin-top:50px;padding:40px 20px;text-align:center;background:var(--choc);color:#cdbd9f;font:12px/1.7 "Montserrat",Arial,sans-serif;letter-spacing:.06em}
+.b-foot a{color:var(--gold2)}
+/* index */
+.bi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:26px;max-width:1100px;margin:50px auto;padding:0 20px}
+.bi-card{display:block;text-decoration:none;background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.bi-card:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgba(60,40,20,.14)}
+.bi-card .im{background:#fff;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center}
+.bi-card .im img{max-width:100%;max-height:100%;object-fit:contain}
+.bi-card .tx{padding:20px 22px 24px}
+.bi-card .k{font:600 11px "Montserrat",Arial,sans-serif;letter-spacing:.25em;text-transform:uppercase;color:#8a6a2e}
+.bi-card h2{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:500;font-size:26px;line-height:1.2;margin:8px 0}
+.bi-card p{margin:0;font-size:18px;color:var(--muted)}
+@media (max-width:600px){body.blog{font-size:19px}.b-hero{padding:64px 18px 70px}.b-nav nav{display:none}.b-quote{margin-left:-22px;margin-right:-22px}.b-num{font-size:58px}}
+@media (prefers-reduced-motion:reduce){.b-btn,.bi-card{transition:none}}
