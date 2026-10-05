@@ -3,7 +3,7 @@ W, H = 1000, 1500
 GOLD = (201, 162, 94); CHOC = (43, 26, 18); CREAM = (250, 244, 234); LIGHT = (236, 214, 170); BLUSH = (248, 228, 226)
 F = 'C:/Windows/Fonts/'
 font = lambda n, s: ImageFont.truetype(F + n, s)
-IMGS = ['01-easel.jpg', '02-crayola.jpg', '03-squishmallow.jpg', '04-dressup.jpg', '05-kitchen.jpg', '06-scooter.jpg', '07-toniebox.jpg', '08-barbie.jpg']
+IMGS = ['01-mixies.jpg', '02-hatchimals.jpg', '03-tent.jpg', '04-moonlite.jpg', '05-unicorn.jpg', '06-squishmallow.jpg', '07-toniebox.jpg', '08-barbie.jpg']
 
 src = Image.open('brand/profile-monogram.png').convert('RGB')
 P = 235
@@ -58,22 +58,22 @@ f = font('BOD_I.TTF', 104); center(d, 'Gifts for', 112, f, CHOC); center(d, '5-Y
 cell, gap = 270, 20; x0 = (W - (3 * cell + 2 * gap)) // 2; y0 = 400
 grid(bg, d, cell, gap, x0, y0, GOLD)
 i = 8; x = x0 + 2 * (cell + gap); y = y0 + 2 * (cell + gap)
-ft = font('BOD_I.TTF', 44); d.text((x + cell / 2 - d.textlength('plus', font=ft) / 2, y + 70), 'plus', font=ft, fill=CHOC)
-fs = font('BOD_B.TTF', 44); t = 'her smile'; d.text((x + cell / 2 - d.textlength(t, font=fs) / 2, y + 125), t, font=fs, fill=CHOC)
+ft = font('BOD_I.TTF', 44); d.text((x + cell / 2 - d.textlength('zero', font=ft) / 2, y + 70), 'zero', font=ft, fill=CHOC)
+fs = font('BOD_B.TTF', 44); t = 'crayons'; d.text((x + cell / 2 - d.textlength(t, font=fs) / 2, y + 125), t, font=fs, fill=CHOC)
 cta(d, 1352, CHOC, GOLD, 'READ THE GUIDE')
 bg.save('pins/gifts5yo-v1-blush-grid.png')
 
 # B: chocolate pattern, hero barbie + row
 bg = patbg(); d = ImageDraw.Draw(bg, 'RGBA'); d.rectangle((0, 0, W, H), fill=(43, 26, 18, 140))
-center(d, 'PARENT-APPROVED', 64, font('BOD_R.TTF', 34), LIGHT)
+center(d, 'WAIT, THEY MAKE THIS?!', 64, font('BOD_R.TTF', 34), LIGHT)
 f = font('BOD_I.TTF', 96)
 for k, l in enumerate(['8 Gifts for', '5-Year-Old Girls', "She'll Scream For"]): center(d, l, 110 + k * 100, f, GOLD)
-c, m = card('08-barbie.jpg', (880, 480), 12); bg.paste(c, (60, 440), m); d.rounded_rectangle((60, 440, 940, 920), radius=26, outline=GOLD, width=4)
-badge(d, 76, 456, 8)
-sm = ['01-easel.jpg', '03-squishmallow.jpg', '05-kitchen.jpg', '07-toniebox.jpg']; nums = [1, 3, 5, 7]
+c, m = card('01-mixies.jpg', (880, 480), 12); bg.paste(c, (60, 440), m); d.rounded_rectangle((60, 440, 940, 920), radius=26, outline=GOLD, width=4)
+badge(d, 76, 456, 1)
+sm = ['02-hatchimals.jpg', '03-tent.jpg', '04-moonlite.jpg', '05-unicorn.jpg']; nums = [2, 3, 4, 5]
 for k, n in enumerate(sm):
     c, m = card(n, (205, 205), 8); x = 60 + k * 225; bg.paste(c, (x, 950), m); d.rounded_rectangle((x, 950, x + 205, 1155), radius=26, outline=GOLD, width=3); badge(d, x + 8, 958, nums[k])
-center(d, 'sparkle, chaos & zero regrets', 1190, font('BOD_I.TTF', 46), LIGHT)
+center(d, 'zero crayons. zero regrets.', 1190, font('BOD_I.TTF', 46), LIGHT)
 cta(d, 1290, GOLD, CHOC, 'GET THE LIST')
 bg.save('pins/gifts5yo-v2-chocolate-hero.png')
 
@@ -83,7 +83,7 @@ d.rectangle((24, 24, W - 24, H - 24), outline=GOLD, width=3)
 center(d, 'THE LUXE LIST', 66, font('BOD_R.TTF', 34), (155, 91, 47))
 f = font('BOD_I.TTF', 100)
 for k, l in enumerate(['Gifts for', '5-Year-Old Girls']): center(d, l, 106 + k * 104, f, CHOC)
-center(d, "(that parents won't secretly hate)", 330, font('BOD_I.TTF', 46), (155, 91, 47))
+center(d, "(wait, they make THIS?!)", 330, font('BOD_I.TTF', 46), (155, 91, 47))
 cw, ch = 430, 205; g = 20; x0 = (W - (2 * cw + g)) // 2; y0 = 430
 for i, n in enumerate(IMGS):
     c, m = card(n, (cw, ch), 8); x = x0 + (i % 2) * (cw + g); y = y0 + (i // 2) * (ch + g)
