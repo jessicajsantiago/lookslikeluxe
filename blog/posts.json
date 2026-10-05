@@ -1,10 +1,34 @@
 [
  {
+  "slug": "clean-girl-gift-guide",
+  "headline": "The Clean Girl Gift Guide (For the Girl Who Wakes Up Like This)",
+  "kicker": "The Gift Edit",
+  "description": "A clean girl gift guide for the glowy, gold-hoop, matcha-sipping girl on your list: skincare, lip mask, hair oil, and the finishing touches. Aesthetic, giftable, and chic.",
+  "image": "images/blog/clean-girl/01-revlon.jpg",
+  "date": "October 5, 2026"
+ },
+ {
   "slug": "gifts-for-5-year-old-girls",
   "headline": "Gifts for 5-Year-Old Girls: Wait, They Make THIS?!",
   "kicker": "The Gift Edit",
   "description": "Gifts for 5-year-old girls that make even grown women say 'wait, they make this?!' Eight unusual, show-stopping ideas, ranked with sarcasm and zero crayons.",
   "image": "images/blog/gifts-5yo/01-mixies.jpg",
+  "date": "October 5, 2026"
+ },
+ {
+  "slug": "gifts-for-8-10-year-old-girls",
+  "headline": "Gifts for 8-10 Year Old Girls (She Is Not a Baby, Thank You)",
+  "kicker": "The Gift Edit",
+  "description": "Gifts for 8 to 10 year old girls that are anything but babyish: an instant camera, a Tamagotchi, a Stanley, a doll with a whole personality, and more.",
+  "image": "images/blog/gifts-8-10/01-american-girl.jpg",
+  "date": "October 5, 2026"
+ },
+ {
+  "slug": "gifts-for-women-in-their-20s",
+  "headline": "Gifts for Women in Their 20s (Who Say \"I Don't Need Anything\" and Absolutely Do)",
+  "kicker": "The Gift Edit",
+  "description": "Gifts for women in their 20s that feel like a treat: a cloud-soft throw, an instant camera, a sunrise alarm, a Kindle, and more. Chic, useful, and not another candle.",
+  "image": "images/blog/gifts-20s/01-barefoot-dreams.jpg",
   "date": "October 5, 2026"
  }
 ]

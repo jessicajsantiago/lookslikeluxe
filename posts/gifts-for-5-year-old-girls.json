@@ -116,6 +116,20 @@
     "Take the compliments. You've earned them. I did the work.",
     "Until the next gift emergency, darling."
   ],
+  "pin": {
+    "kicker": "THE GIFT EDIT",
+    "h1": ["Gifts for", "5-Year-Old Girls"],
+    "sub": "(wait, they make THIS?!)",
+    "tile": ["zero", "crayons"],
+    "cta1": "READ THE GUIDE",
+    "hero_kicker": "WAIT, THEY MAKE THIS?!",
+    "hero_lines": ["8 Gifts for", "5-Year-Old Girls", "She'll Scream For"],
+    "hero_tag": "zero crayons. zero regrets.",
+    "cta2": "GET THE LIST",
+    "cta3": "SHOP ALL 8",
+    "hero_index": 0,
+    "small_idx": [1, 2, 3, 4]
+  },
   "related": [
     {"title": "Gifts for Her That Look Way More Expensive Than They Are", "url": "/l/gifts-for-her"},
     {"title": "The Luxe Holiday Gift Guide (free)", "url": "/index.html#signup"},
