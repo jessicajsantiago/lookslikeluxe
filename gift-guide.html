@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>The Luxe Holiday Gift Guide | Looks Like Luxe</title>
+<meta name="description" content="25 gift ideas that look way more expensive than they are.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="disclosure">As an Amazon Associate I earn from qualifying purchases. Prices and availability are shown on Amazon.</div>
+<header class="site"><a class="brand" href="index.html">Looks Like <em>Luxe</em></a></header>
+<main class="wrap">
+  <section class="gg-hero">
+    <span class="eyebrow">Your free guide 🎁</span>
+    <h1>The Luxe Holiday <em>Gift Guide</em></h1>
+    <p>25 gifts that say "I have impeccable taste" and "I definitely did not overspend." Pick who you're shopping for and go.</p>
+    <nav class="chips" id="chips"></nav>
+  </section>
+  <div id="guide"></div>
+  <section class="tip">
+    <strong>Pro tip:</strong> add a handwritten note and a pretty ribbon. That's what makes any gift look like it came from somewhere fancy. ✨
+  </section>
+  <section class="more"><h2>Want a cozier home too?</h2><div id="m"></div></section>
+</main>
+<footer>&copy; Looks Like Luxe. Product names are trademarks of their owners. As an Amazon Associate I earn from qualifying purchases.</footer>
+<script src="lists-data.js"></script>
+<script>
+// Each gift opens an Amazon search tagged with your ID. Swap "q" for a specific product later by adding asin: "B0..." to a gift.
+var TAG=window.LLL.tag;
+var G=[
+ {id:"hostess",e:"🥂",t:"The Hostess With the Mostest",s:"For every dinner party invite you say yes to.",items:[
+  {n:"Marble & wood cheese board",d:"Instant charcuterie moment.",q:"marble wood cheese board"},
+  {n:"Linen cocktail napkins",d:"Tiny upgrade, huge table energy.",q:"linen cocktail napkins set"},
+  {n:"Luxury-look soy candle",d:"Cozy scent, glass jar, zero tags.",q:"luxury soy candle glass jar"},
+  {n:"Ribbed glass tumblers",d:"Pretty enough for the open shelf.",q:"ribbed glass tumblers set"},
+  {n:"Olive wood serving set",d:"For dips, spreads, and compliments.",q:"olive wood serving utensils set"}]},
+ {id:"mom",e:"💐",t:"For Mom (Who Said Don't Get Me Anything)",s:"She meant: get me something really nice.",items:[
+  {n:"Waffle knit spa robe",d:"Hotel-robe vibes at home.",q:"waffle knit spa robe women"},
+  {n:"Silk pillowcase",d:"Sleep and hair thank you.",q:"silk pillowcase queen"},
+  {n:"Ceramic planter with tray",d:"Looks boutique, ships easy.",q:"ceramic planter with saucer neutral"},
+  {n:"Cozy chunky throw",d:"The couch-and-tea essential.",q:"chunky knit throw blanket cream"},
+  {n:"Hand cream gift set",d:"Small luxury, big smiles.",q:"hand cream gift set shea"}]},
+ {id:"bestie",e:"👯",t:"For the Bestie",s:"Because she'll text you a heart-eyes emoji.",items:[
+  {n:"Satin pajama set",d:"Brunch-ready or bed-ready.",q:"satin pajama set women"},
+  {n:"Cordless mini table lamp",d:"Aesthetic nightstand, no outlet.",q:"cordless rechargeable mini table lamp"},
+  {n:"Gold jewelry organizer",d:"Pretty storage for pretty things.",q:"jewelry organizer tray velvet"},
+  {n:"Insulated tumbler with straw",d:"Her whole personality, in a cup.",q:"insulated tumbler with straw"},
+  {n:"Silk scrunchie set",d:"Tiny gift, giant glow-up.",q:"silk scrunchies set"}]},
+ {id:"teacher",e:"🍎",t:"Teachers & Coworkers",s:"Thoughtful without being weird.",items:[
+  {n:"Ceramic mug set",d:"Coffee tastes better in pretty mugs.",q:"ceramic mug set neutral"},
+  {n:"Faux desk plant",d:"Zero watering, all the charm.",q:"faux potted plant desk small"},
+  {n:"Linen notebook",d:"For ideas, lists, and plans.",q:"linen hardcover notebook"},
+  {n:"Scented candle trio",d:"Three cozy moods in one box.",q:"mini scented candle gift set"},
+  {n:"Gourmet hot cocoa set",d:"Because it's freezing in that office.",q:"gourmet hot chocolate gift set"}]},
+ {id:"home",e:"🏡",t:"For the Home Lover",s:"The ones who rearrange their shelves for fun.",items:[
+  {n:"Amber taper candle holders",d:"Warm glow, vintage feel.",q:"amber glass taper candle holders"},
+  {n:"Dried pampas bundle",d:"Fills a vase in 10 seconds.",q:"dried pampas grass bouquet"},
+  {n:"Round wooden tray",d:"Corral candles like a stylist.",q:"round wooden decorative tray"},
+  {n:"Textured pillow covers",d:"Swap a look without a sofa.",q:"textured corduroy pillow covers"},
+  {n:"Cordless table lamp",d:"Moody lighting anywhere.",q:"cordless rechargeable table lamp ceramic"}]}
+];
+var chips=document.getElementById('chips'),guide=document.getElementById('guide');
+G.forEach(function(g){
+  var a=document.createElement('a');a.href='#'+g.id;a.textContent=g.e+' '+g.t.split(' (')[0];chips.appendChild(a);
+  var s=document.createElement('section');s.className='sec';s.id=g.id;
+  s.innerHTML='<h2><span class="em">'+g.e+'</span>'+g.t+'</h2><p class="sub">'+g.s+'</p>';
+  var grid=document.createElement('div');grid.className='gifts';
+  g.items.forEach(function(it){
+    var c=document.createElement('div');c.className='gift-card';
+    var h=document.createElement('h3');h.textContent=it.n;
+    var p=document.createElement('p');p.textContent=it.d;
+    var l=document.createElement('a');
+    l.href=it.asin?('https://www.amazon.com/dp/'+it.asin+'?tag='+encodeURIComponent(TAG)):('https://www.amazon.com/s?k='+encodeURIComponent(it.q)+'&tag='+encodeURIComponent(TAG));
+    l.target='_blank';l.rel='sponsored nofollow noopener';l.textContent='Find it on Amazon';
+    c.appendChild(h);c.appendChild(p);c.appendChild(l);grid.appendChild(c);
+  });
+  s.appendChild(grid);guide.appendChild(s);
+});
+var m=document.getElementById('m');
+Object.keys(window.LLL.lists).filter(function(k){return !window.LLL.lists[k].hidden}).forEach(function(k){var a=document.createElement('a');a.href='list.html?l='+k;a.textContent=window.LLL.lists[k].title;m.appendChild(a)});
+</script>
+</body>
+</html>

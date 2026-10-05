@@ -14,6 +14,7 @@
 <main class="wrap">
   <section class="hero"><span class="eyebrow">Hand-picked Amazon finds</span><h1 id="t"></h1><p id="i"></p><div class="pills"><span id="c"></span><span>Tap any item to shop on Amazon</span></div></section>
   <section class="grid" id="g"></section>
+  <section class="mini-signup"><strong>🎁 Want the free Luxe Holiday Gift Guide?</strong><br><a href="index.html#signup">Get it free</a></section>
   <section class="more"><h2>More finds</h2><div id="m"></div></section>
 </main>
 <footer>&copy; Looks Like Luxe. Product names are trademarks of their owners. As an Amazon Associate I earn from qualifying purchases.</footer>
@@ -42,7 +43,7 @@
     b.appendChild(h);b.appendChild(d);b.appendChild(l);a.appendChild(t);a.appendChild(b);g.appendChild(a);
   });
   var m=document.getElementById('m');
-  Object.keys(D.lists).filter(function(k){return k!==slug}).forEach(function(k){
+  Object.keys(D.lists).filter(function(k){return k!==slug&&!D.lists[k].hidden}).forEach(function(k){
     var a=document.createElement('a');a.href="list.html?l="+k;a.textContent=D.lists[k].title;m.appendChild(a);
   });
 })();

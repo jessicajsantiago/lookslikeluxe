@@ -13,12 +13,26 @@
 <main class="wrap">
   <section class="hero"><span class="eyebrow">Amazon home decor &amp; gift finds</span><h1>Looks like luxe. Isn't.</h1><p>Curated Amazon home decor and gift finds that look designer. Pick a list to shop.</p></section>
   <section class="more" style="border:0"><div id="m"></div></section>
+  <section class="signup" id="signup">
+    <span class="gift">🎁</span>
+    <h2>Get the Luxe Holiday Gift Guide, free</h2>
+    <p>25 gifts that look like you spent way more, sorted by who you're shopping for. Plus one fun email a week with the prettiest finds. Zero spam. Zero sad candles.</p>
+    <!-- Swap this form for your GoHighLevel embed code when ready (keep id="signup" on the section). -->
+    <form name="newsletter" method="POST" action="thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="newsletter">
+      <p class="hp"><label>Don't fill this out: <input name="bot-field"></label></p>
+      <input type="text" name="first_name" placeholder="First name" aria-label="First name" autocomplete="given-name">
+      <input type="email" name="email" placeholder="Your best email" aria-label="Email address" autocomplete="email" required>
+      <button type="submit">Send me the guide</button>
+    </form>
+    <p class="fine">By signing up you agree to get emails from Looks Like Luxe. Unsubscribe any time.</p>
+  </section>
 </main>
 <footer>&copy; Looks Like Luxe. As an Amazon Associate I earn from qualifying purchases.</footer>
 <script src="lists-data.js"></script>
 <script>
 var D=window.LLL,m=document.getElementById('m');
-Object.keys(D.lists).forEach(function(k){var a=document.createElement('a');a.href="list.html?l="+k;a.textContent=D.lists[k].title;m.appendChild(a)});
+Object.keys(D.lists).filter(function(k){return !D.lists[k].hidden}).forEach(function(k){var a=document.createElement('a');a.href="list.html?l="+k;a.textContent=D.lists[k].title;m.appendChild(a)});
 </script>
 </body>
 </html>

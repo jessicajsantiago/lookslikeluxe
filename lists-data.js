@@ -20,6 +20,7 @@ window.LLL = {
       ]
     },
     "modern-neutral-living-room": {
+      hidden: true,
       title: "Modern Neutral Living Room Decor",
       intro: "Clean, quiet-luxury style pieces that look far pricier than they are.",
       products: [
@@ -29,6 +30,7 @@ window.LLL = {
       ]
     },
     "host-and-hostess-gifts": {
+      hidden: true,
       title: "Host & Hostess Gifts That Look Expensive",
       intro: "Giftable finds that feel thoughtful and elevated.",
       products: [
