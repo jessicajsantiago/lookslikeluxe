@@ -67,3 +67,4 @@ footer.b-foot{margin-top:50px;padding:40px 20px;text-align:center;background:var
 .bi-card p{margin:0;font-size:18px;color:var(--muted)}
 @media (max-width:600px){body.blog{font-size:19px}.b-hero{padding:64px 18px 70px}.b-nav nav{display:none}.b-quote{margin-left:-22px;margin-right:-22px}.b-num{font-size:58px}}
 @media (prefers-reduced-motion:reduce){.b-btn,.bi-card{transition:none}}
+html,body{max-width:100%;overflow-x:hidden}

@@ -5,20 +5,45 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Looks Like Luxe | Luxury Finds for Less</title>
 <meta name="description" content="Rich-girl taste, real-girl budget. Luxe-looking home, gift and beauty finds on Amazon, curated by Looks Like Luxe.">
-<link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://lookslikeluxe.netlify.app/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/blog.css">
+<link rel="stylesheet" href="/site.css">
 </head>
-<body>
-<div class="disclosure">As an Amazon Associate I earn from qualifying purchases.</div>
-<header class="site"><a class="brand" href="index.html">Looks Like <em>Luxe</em></a></header>
-<main class="wrap">
-  <section class="hero"><span class="eyebrow">Luxury finds for less</span><h1>Looks like luxe. Isn't.</h1><p>Rich-girl taste, real-girl budget. Curated Amazon home, gift and beauty finds that look designer. Pick a category to shop.</p>
-  <nav class="cats"><a href="list.html?l=gifts-for-her"><span>🎁</span>Gifts</a><a href="list.html?l=cozy-fall-living-room"><span>🏡</span>Home</a><a href="gift-guide.html#bestie"><span>✨</span>Beauty &amp; self-care</a></nav></section>
-  <section class="more" style="border:0"><h2>All lists</h2><div id="m"></div></section>
-  <section class="signup" id="signup">
-    <span class="gift">🎁</span>
-    <h2>Get the Luxe Holiday Gift Guide, free</h2>
-    <p>25 gifts that look like you spent way more, sorted by who you're shopping for. Plus one fun email a week with the prettiest finds. Zero spam. Zero sad candles.</p>
-    <div class="ghl-form">
+<body class="site">
+<div class="b-disc">As an Amazon Associate I earn from qualifying purchases.</div>
+<header class="b-nav"><a class="b-brand" href="/">Looks Like <em>Luxe</em></a><nav><a href="/blog/">The Edit</a><a href="/l/gifts-for-her">Gifts</a><a href="#signup">Free Guide</a></nav></header>
+
+<section class="s-hero">
+  <img class="s-badge" src="/images/brand/ll-badge.png" alt="Looks Like Luxe monogram">
+  <div class="b-kicker">Luxury finds for less</div>
+  <h1>Looks like luxe. Isn't.</h1>
+  <p class="sub">Rich-girl taste, real-girl budget. Curated Amazon home, gift and beauty finds that look designer, with a little drama on the side.</p>
+  <div class="s-pills"><span>Home</span><span>Gifts</span><span>Beauty</span></div>
+</section>
+
+<nav class="s-cats">
+  <a class="s-cat" href="/l/gifts-for-her"><small>Shop</small>Gifts</a>
+  <a class="s-cat" href="/l/cozy-fall-living-room"><small>Shop</small>Home</a>
+  <a class="s-cat" href="/gift-guide.html#bestie"><small>Shop</small>Beauty &amp; self-care</a>
+</nav>
+
+<section class="s-sec">
+  <h2>Fresh from The Edit</h2><div class="rule"></div>
+  <div class="s-posts bi-grid" id="posts" style="margin:0;padding:0"></div>
+  <div style="text-align:center;margin-top:26px"><a class="s-btn" style="display:inline-block;padding:14px 32px" href="/blog/">Read The Edit</a></div>
+</section>
+
+<section class="s-sec">
+  <h2>Shop the lists</h2><div class="rule"></div>
+  <div class="s-lists" id="lists"></div>
+</section>
+
+<section class="s-signup" id="signup">
+  <h2>Get the Luxe Holiday Gift Guide, free</h2>
+  <p>25 gifts that look like you spent way more, sorted by who you're shopping for. Plus one fun email a week with the prettiest finds. Zero spam. Zero sad candles.</p>
+  <div class="form">
 <iframe
     src="https://api.leadconnectorhq.com/widget/form/gsRUZDDIsJEpAF1ZlzP9"
     style="width:100%;height:100%;border:none;border-radius:8px"
@@ -40,15 +65,24 @@
         >
 </iframe>
 <script src="https://link.msgsndr.com/js/form_embed.js"></script>
-    </div>
-    <p class="fine">By signing up you agree to get emails from Looks Like Luxe. Unsubscribe any time. <a href="privacy.html">Privacy</a></p>
-  </section>
-</main>
-<footer>&copy; Looks Like Luxe. As an Amazon Associate I earn from qualifying purchases. <a href="privacy.html">Privacy &amp; disclosure</a></footer>
-<script src="lists-data.js"></script>
+  </div>
+  <p class="s-fine">By signing up you agree to get emails from Looks Like Luxe. Unsubscribe any time. <a href="/privacy.html">Privacy</a></p>
+</section>
+
+<footer class="b-foot">&copy; Looks Like Luxe &middot; Rich-girl taste, real-girl budget.<br>As an Amazon Associate I earn from qualifying purchases. Prices and availability are shown on Amazon. Product names are trademarks of their owners.<br><a href="/privacy.html">Privacy &amp; disclosure</a></footer>
+
+<script src="/lists-data.js"></script>
 <script>
-var D=window.LLL,m=document.getElementById('m');
-Object.keys(D.lists).filter(function(k){return !D.lists[k].hidden}).forEach(function(k){var a=document.createElement('a');a.href="list.html?l="+k;a.textContent=D.lists[k].title;m.appendChild(a)});
+var D=window.LLL,m=document.getElementById('lists');
+Object.keys(D.lists).filter(function(k){return !D.lists[k].hidden}).forEach(function(k){var a=document.createElement('a');a.href='/l/'+k;a.textContent=D.lists[k].title;m.appendChild(a)});
+fetch('/blog/posts.json').then(function(r){return r.json()}).then(function(ps){
+  var g=document.getElementById('posts');
+  ps.slice(0,6).forEach(function(p){
+    var a=document.createElement('a');a.className='bi-card';a.href='/blog/'+p.slug+'.html';
+    a.innerHTML='<div class="im"><img src="/'+p.image+'" alt="" loading="lazy"></div><div class="tx"><div class="k"></div><h2></h2><p></p></div>';
+    a.querySelector('.k').textContent=p.kicker;a.querySelector('h2').textContent=p.headline;a.querySelector('p').textContent=p.description;g.appendChild(a);
+  });
+}).catch(function(){});
 </script>
 </body>
 </html>

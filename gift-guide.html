@@ -6,28 +6,26 @@
 <meta name="robots" content="noindex">
 <title>The Luxe Holiday Gift Guide | Looks Like Luxe</title>
 <meta name="description" content="25 gift ideas that look way more expensive than they are.">
-<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/blog.css">
+<link rel="stylesheet" href="/site.css">
 </head>
-<body>
-<div class="disclosure">As an Amazon Associate I earn from qualifying purchases. Prices and availability are shown on Amazon.</div>
-<header class="site"><a class="brand" href="index.html">Looks Like <em>Luxe</em></a></header>
-<main class="wrap">
-  <section class="gg-hero">
-    <span class="eyebrow">Your free guide 🎁</span>
-    <h1>The Luxe Holiday <em>Gift Guide</em></h1>
-    <p>25 gifts that say "I have impeccable taste" and "I definitely did not overspend." Pick who you're shopping for and go.</p>
-    <nav class="chips" id="chips"></nav>
-  </section>
-  <div id="guide"></div>
-  <section class="tip">
-    <strong>Pro tip:</strong> add a handwritten note and a pretty ribbon. That's what makes any gift look like it came from somewhere fancy. ✨
-  </section>
-  <section class="more"><h2>Want a cozier home too?</h2><div id="m"></div></section>
-</main>
-<footer>&copy; Looks Like Luxe. Product names are trademarks of their owners. As an Amazon Associate I earn from qualifying purchases. <a href="privacy.html">Privacy &amp; disclosure</a></footer>
-<script src="lists-data.js"></script>
+<body class="site">
+<div class="b-disc">As an Amazon Associate I earn from qualifying purchases. Prices and availability are shown on Amazon.</div>
+<header class="b-nav"><a class="b-brand" href="/">Looks Like <em>Luxe</em></a><nav><a href="/blog/">The Edit</a><a href="/l/gifts-for-her">Gifts</a></nav></header>
+<section class="s-hero">
+  <div class="b-kicker">Your free guide</div>
+  <h1>The Luxe Holiday Gift Guide</h1>
+  <p class="sub">25 gifts that say "I have impeccable taste" and "I definitely did not overspend." Pick who you're shopping for and go.</p>
+  <nav class="s-chips" id="chips"></nav>
+</section>
+<div id="guide"></div>
+<section class="s-nudge" style="margin:60px auto"><strong>Pro tip:</strong> add a handwritten note and a pretty ribbon. That is what makes any gift look like it came from somewhere fancy.</section>
+<section class="s-more"><h2>Want a cozier home too?</h2><div class="s-lists" id="m"></div></section>
+<footer class="b-foot">&copy; Looks Like Luxe &middot; Product names are trademarks of their owners. As an Amazon Associate I earn from qualifying purchases.<br><a href="/privacy.html">Privacy &amp; disclosure</a></footer>
+<script src="/lists-data.js"></script>
 <script>
-// Each gift opens an Amazon search tagged with your ID. Swap "q" for a specific product later by adding asin: "B0..." to a gift.
 var TAG=window.LLL.tag;
 var G=[
  {id:"hostess",e:"🥂",t:"The Hostess With the Mostest",s:"For every dinner party invite you say yes to.",items:[
@@ -64,11 +62,11 @@ var G=[
 var chips=document.getElementById('chips'),guide=document.getElementById('guide');
 G.forEach(function(g){
   var a=document.createElement('a');a.href='#'+g.id;a.textContent=g.e+' '+g.t.split(' (')[0];chips.appendChild(a);
-  var s=document.createElement('section');s.className='sec';s.id=g.id;
-  s.innerHTML='<h2><span class="em">'+g.e+'</span>'+g.t+'</h2><p class="sub">'+g.s+'</p>';
-  var grid=document.createElement('div');grid.className='gifts';
+  var s=document.createElement('section');s.className='gg-sec';s.id=g.id;
+  s.innerHTML='<h2>'+g.e+' '+g.t+'</h2><p class="sub">'+g.s+'</p>';
+  var grid=document.createElement('div');grid.className='gg-gifts';
   g.items.forEach(function(it){
-    var c=document.createElement('div');c.className='gift-card';
+    var c=document.createElement('div');c.className='gg-card';
     var h=document.createElement('h3');h.textContent=it.n;
     var p=document.createElement('p');p.textContent=it.d;
     var l=document.createElement('a');
@@ -79,7 +77,7 @@ G.forEach(function(g){
   s.appendChild(grid);guide.appendChild(s);
 });
 var m=document.getElementById('m');
-Object.keys(window.LLL.lists).filter(function(k){return !window.LLL.lists[k].hidden}).forEach(function(k){var a=document.createElement('a');a.href='list.html?l='+k;a.textContent=window.LLL.lists[k].title;m.appendChild(a)});
+Object.keys(window.LLL.lists).filter(function(k){return !window.LLL.lists[k].hidden}).forEach(function(k){var a=document.createElement('a');a.href='/l/'+k;a.textContent=window.LLL.lists[k].title;m.appendChild(a)});
 </script>
 </body>
 </html>

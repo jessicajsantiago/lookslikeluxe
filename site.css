@@ -1,0 +1,73 @@
+/* Looks Like Luxe: site pages (home, lists, gift guide, thanks, privacy). Load AFTER blog.css, which holds the shared tokens. */
+body.site{margin:0;background:var(--cream);color:var(--ink);font-family:"Cormorant Garamond",Georgia,serif;font-size:21px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.site a{color:inherit}
+/* hero */
+.s-hero{position:relative;color:#fff;text-align:center;padding:84px 20px 96px;background:var(--choc) url(/images/blog/pattern.png) repeat;background-size:235px}
+.s-hero:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(43,26,18,.5),rgba(43,26,18,.93))}
+.s-hero>*{position:relative}
+.s-badge{width:112px;height:112px;border-radius:50%;border:2px solid var(--gold);box-shadow:0 0 0 6px rgba(201,162,94,.18);margin:0 auto 22px;display:block}
+.s-hero h1{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:500;color:var(--gold);font-size:clamp(38px,7vw,72px);line-height:1.08;max-width:880px;margin:14px auto}
+.s-hero p.sub{max-width:620px;margin:0 auto;color:#eadcc2;font-size:clamp(19px,2.6vw,23px)}
+.s-pills{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.s-pills span{font:600 11px "Montserrat",Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(201,162,94,.55);color:var(--gold2);border-radius:999px;padding:8px 16px}
+/* category cards */
+.s-cats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:900px;margin:-44px auto 0;padding:0 20px;position:relative;z-index:2}
+.s-cat{display:flex;flex-direction:column;align-items:center;gap:6px;padding:26px 14px;background:var(--paper);border:1px solid var(--gold);border-radius:6px;text-decoration:none;font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:24px;box-shadow:0 18px 40px rgba(60,40,20,.14);transition:transform .2s,box-shadow .2s}
+.s-cat small{font:600 10px "Montserrat",Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-style:normal}
+.s-cat:hover{transform:translateY(-4px);box-shadow:0 24px 46px rgba(60,40,20,.2)}
+.s-sec{max-width:1100px;margin:0 auto;padding:70px 20px 10px}
+.s-sec h2{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(28px,4.5vw,40px);text-align:center;margin:0 0 6px}
+.s-sec .rule{width:90px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:12px auto 30px}
+.s-lists{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:6px}
+.s-lists a{font:600 12px "Montserrat",Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:11px 20px;color:var(--ink);transition:border-color .2s,color .2s}
+.s-lists a:hover{border-color:var(--gold);color:#8a6a2e}
+/* signup (shared with blog look) */
+.s-signup{max-width:760px;margin:70px auto 20px;padding:44px 26px;text-align:center;color:#fff;background:linear-gradient(135deg,#2a1a12,#4b2f20 65%,#a8864f);border-radius:6px}
+.s-signup h2{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(26px,5vw,38px);margin:0 0 8px;color:var(--gold2)}
+.s-signup p{margin:0 auto 18px;max-width:540px;font-size:19px;color:#f1e6d6}
+.s-signup .form{max-width:460px;min-height:434px;margin:0 auto;background:#fffaf2;border-radius:10px;padding:6px}
+.s-signup iframe{width:100%;min-height:434px;border:0;display:block}
+.s-fine{font:12px "Montserrat",Arial,sans-serif;color:#e3d3bd;margin-top:14px}
+.s-fine a{color:#fff}
+/* list pages */
+.s-intro{max-width:640px;margin:0 auto}
+.s-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:24px;max-width:1100px;margin:46px auto 0;padding:0 20px}
+.s-card{background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.s-card:hover{transform:translateY(-4px);box-shadow:0 22px 44px rgba(60,40,20,.14)}
+.s-thumb{background:#fff;aspect-ratio:1/1;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.s-thumb img{width:100%;height:100%;object-fit:contain}
+.s-num{position:absolute;top:12px;left:12px;width:36px;height:36px;border-radius:50%;background:var(--gold);color:var(--choc);display:flex;align-items:center;justify-content:center;font:700 16px "Playfair Display",Georgia,serif}
+.s-body{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.s-body h3{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:500;font-size:20px;line-height:1.25}
+.s-body p{margin:0;color:var(--muted);font-size:18px;flex:1}
+.s-btn{display:block;text-align:center;font:600 12px "Montserrat",Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:var(--choc);background:var(--gold);padding:14px;border-radius:999px;transition:background .2s,transform .2s}
+.s-btn:hover{background:var(--gold2);transform:translateY(-2px)}
+.s-more{border-top:1px solid var(--line);margin-top:70px;padding:44px 20px 52px;text-align:center;background:#f4ead8}
+.s-more h2{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:500;margin:0 0 14px}
+.s-nudge{max-width:760px;margin:46px auto 0;padding:22px;border:1px dashed var(--gold);border-radius:6px;text-align:center;background:var(--paper)}
+.s-nudge strong{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:500;font-size:22px}
+.s-nudge a{display:inline-block;margin-top:10px;font:600 12px "Montserrat",Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;background:var(--choc);color:var(--gold2);padding:12px 24px;border-radius:999px}
+/* post cards on home */
+.s-posts{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:26px}
+/* gift guide + thanks + privacy */
+.s-chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+.s-chips a{font:600 11px "Montserrat",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(201,162,94,.6);color:var(--gold2);border-radius:999px;padding:10px 18px}
+.s-chips a:hover{background:rgba(201,162,94,.15)}
+.gg-sec{max-width:1000px;margin:0 auto;padding:54px 20px 0;scroll-margin-top:20px}
+.gg-sec h2{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(26px,4.5vw,36px);margin:0}
+.gg-sec .sub{color:var(--muted);margin:2px 0 18px}
+.gg-gifts{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.gg-card{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:4px;padding:18px;display:flex;flex-direction:column;gap:6px}
+.gg-card h3{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:500;font-size:19px}
+.gg-card p{margin:0;color:var(--muted);font-size:17px;flex:1}
+.gg-card a{align-self:flex-start;margin-top:8px;font:600 11px "Montserrat",Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;background:var(--choc);color:var(--gold2);padding:10px 18px;border-radius:999px}
+.s-page{max-width:720px;margin:0 auto;padding:30px 22px 70px}
+.s-page h2{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:500;font-size:28px;margin:34px 0 4px}
+.s-page p{margin:0 0 1em}
+.s-thanks{text-align:center;padding:70px 20px 40px}
+.s-thanks .s-btn{display:inline-block;padding:16px 34px;margin-top:10px}
+@media (max-width:640px){body.site{font-size:19px}.s-cats{grid-template-columns:1fr;margin-top:-34px}.s-hero{padding:60px 18px 78px}.s-grid{grid-template-columns:repeat(2,1fr);gap:12px}.s-body{padding:12px}.s-body h3{font-size:16px}.s-body p{display:none}.s-btn{padding:11px;font-size:11px}}
+@media (prefers-reduced-motion:reduce){.s-cat,.s-card,.s-btn{transition:none}}
+.s-sec .bi-card h2{font-size:24px;text-align:left;margin:8px 0;line-height:1.2}
+.s-sec .bi-card .im{aspect-ratio:4/3}
+html,body{max-width:100%;overflow-x:hidden}

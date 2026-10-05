@@ -80,6 +80,8 @@ def main():
     for p in posts:
         open(f'blog/{p["slug"]}.html', "w", encoding="utf-8").write(build_post(p))
     open("blog/index.html", "w", encoding="utf-8").write(build_index(posts))
+    feed = [{"slug": p["slug"], "headline": p["headline"], "kicker": p["kicker"], "description": p["description"], "image": p["products"][0]["image"], "date": p["date"]} for p in posts]
+    json.dump(feed, open("blog/posts.json", "w", encoding="utf-8"), indent=1)
     urls = ["/", "/blog/", "/l/gifts-for-her", "/l/cozy-fall-living-room"] + [f'/blog/{p["slug"]}.html' for p in posts]
     sm = '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "".join(f"<url><loc>{SITE}{u}</loc></url>" for u in urls) + "</urlset>"
     open("sitemap.xml", "w", encoding="utf-8").write(sm)
