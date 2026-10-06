@@ -30,7 +30,7 @@ def footer():
 
 def page(title, desc, body, canonical, og_image=None):
     og = f'<meta property="og:image" content="{SITE}/{og_image}">' if og_image else ""
-    return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
+    return (f'<!doctype html><html lang="en"><head><meta name="p:domain_verify" content="d852d5229a38dea863881f54dfc11f45"/><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
             f'<title>{e(title)}</title><meta name="description" content="{e(desc)}"><link rel="canonical" href="{SITE}{canonical}">'
             f'<meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:type" content="article">{og}'
             f'{FONTS}<link rel="stylesheet" href="/blog.css"></head><body class="blog">{body}</body></html>')
