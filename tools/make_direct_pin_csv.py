@@ -47,6 +47,11 @@ LISTS = {
          'Amazon gifts for women in their 20s who say they do not need anything but absolutely do: a cozy throw, an instant camera, a Kindle, a sunrise alarm and more. All on my Amazon storefront. Tap the pin for the list.' + DISC + ' #giftsforher #amazonfinds #giftguide'),
         ('cream', 'Best Amazon Gift Ideas for 25 Year Old Women',
          'Chic, useful Amazon gift ideas for women in their twenties, all linked on my Amazon storefront. Tap the pin to shop the list.' + DISC + ' #giftideasforher #amazongiftguide #birthdaygifts')]),
+    'gifts-mom': ('YVF7I2DL98JG', 'Luxe Gifts for Her', [
+        ('choc', 'Amazon Christmas Gifts for Mom She Will Actually Use',
+         'Amazon Christmas gifts for mom that go way beyond a candle: a salon-style hair styler, a digital photo frame, a smart herb garden, a Ninja Creami and more. All on my Amazon storefront. Tap the pin for the list.' + DISC + ' #giftsformom #amazonfinds #christmasgiftideas'),
+        ('cream', 'Best Amazon Gifts for Mom This Christmas (Thoughtful, Not Boring)',
+         'The best Amazon Christmas gifts for mom, linked on my Amazon storefront. Kitchen upgrades, cozy gifts and sentimental ones. Tap the pin to shop the list.' + DISC + ' #momgifts #amazongiftguide #christmasgiftsformom')]),
 }
 
 # (key, variant index) in posting order and Eastern times: 9 AM slot, choc versions first (Oct 6-9), cream versions next (Oct 12-15)
@@ -61,9 +66,12 @@ SLOTS2 = [('gifts-5yo', 0, dt.datetime(2026, 10, 16, 9)), ('gifts-8-10', 0, dt.d
           ('gifts-8-10', 1, dt.datetime(2026, 10, 22, 9)), ('gifts-20s', 1, dt.datetime(2026, 10, 23, 9))]
 
 
+SLOTS3 = [('gifts-mom', 0, dt.datetime(2026, 10, 10, 9)), ('gifts-mom', 1, dt.datetime(2026, 10, 17, 9))]
+
+
 def main(path, batch2=False):
     rows = [ROW1, ROW2]
-    for key, v, et in (SLOTS2 if batch2 else SLOTS):
+    for key, v, et in (SLOTS3 if batch2 == 'batch3' else SLOTS2 if batch2 else SLOTS):
         lid, board, variants = LISTS[key]
         variant, title, desc = variants[v]
         pt = et - dt.timedelta(hours=3)
@@ -78,4 +86,4 @@ def main(path, batch2=False):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else "pins-direct.csv", len(sys.argv) > 2 and sys.argv[2] == 'batch2')
+    main(sys.argv[1] if len(sys.argv) > 1 else "pins-direct.csv", (sys.argv[2] if len(sys.argv) > 2 and sys.argv[2] in ('batch3',) else (len(sys.argv) > 2 and sys.argv[2] == 'batch2')))

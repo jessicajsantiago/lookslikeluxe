@@ -19,6 +19,7 @@ SETS = {
     'gifts-5yo': ('images/blog/gifts-5yo', 'AMAZON TOY FINDS', ['Gifts for 5 Year', 'Old Girls'], '', 'SHOP THE LIST'),
     'gifts-8-10': ('images/blog/gifts-8-10', 'AMAZON TWEEN FINDS', ['Gifts for 8-10', 'Year Old Girls'], '', 'SHOP THE LIST'),
     'gifts-20s': ('images/blog/gifts-20s', 'AMAZON GIFT FINDS', ['Gifts for Women', 'in Their 20s'], '', 'SHOP THE LIST'),
+    'christmas-decor': ('images/blog/christmas-decor', 'AMAZON HOME FINDS', ['Christmas Decor', 'That Looks Designer'], '', 'SHOP THE LIST'),
     'gifts-teacher': ('images/blog/gifts-teacher', 'AMAZON GIFT FINDS', ['Teacher Gifts', "That Aren't Mugs"], '', 'SHOP THE LIST'),
     'gifts-mom': ('images/blog/gifts-mom', 'AMAZON GIFT FINDS', ['Christmas Gifts', 'for Mom'], '', 'SHOP THE LIST'),
     'cozy-fall': ('images/cozy-fall', 'AMAZON HOME FINDS', ['Cozy Fall', 'Home Decor'], 'looks designer. isn\'t.', 'SHOP THE LIST'),
@@ -51,7 +52,7 @@ def photo_card(im, size=620):
     c.putalpha(m); return c
 
 
-CARDS = {'clean-girl': {2, 6}, 'gifts-mom': {1, 2, 6, 7}, 'gifts-teacher': {2, 3, 4, 5, 6, 7}}   # product shots with white parts that cut out badly -> rounded photo cards
+CARDS = {'clean-girl': {2, 6}, 'gifts-mom': {1, 2, 6, 7}, 'gifts-teacher': {2, 3, 4, 5, 6, 7}, 'christmas-decor': {3, 4, 5, 6, 7}}   # product shots with white parts that cut out badly -> rounded photo cards
 
 
 def cutout(path, force_card=False):
