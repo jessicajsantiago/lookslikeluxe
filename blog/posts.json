@@ -24,6 +24,14 @@
   "date": "October 5, 2026"
  },
  {
+  "slug": "gifts-for-mom",
+  "headline": "Christmas Gifts for Mom (She Said \"Don't Get Me Anything.\" She Lied.)",
+  "kicker": "The Gift Edit",
+  "description": "Amazon Christmas gifts for mom that go way beyond a candle: a hair styler she'll use daily, a digital frame, a smart herb garden, a Ninja Creami and more. Eight picks with great reviews.",
+  "image": "images/blog/gifts-mom/01-revlon.jpg",
+  "date": "October 6, 2026"
+ },
+ {
   "slug": "gifts-for-women-in-their-20s",
   "headline": "Gifts for Women in Their 20s (Who Say \"I Don't Need Anything\" and Absolutely Do)",
   "kicker": "The Gift Edit",
@@ -38,5 +46,13 @@
   "description": "Host and hostess gifts that go way beyond a bottle of wine: a champagne saber, a cocktail smoker, a truffle oil duo, a bitters trio and more. Elegant, giftable and not another candle.",
   "image": "images/blog/host-hostess/01-bartender-kit.jpg",
   "date": "October 5, 2026"
+ },
+ {
+  "slug": "teacher-gifts",
+  "headline": "Teacher Gifts That Aren't Mugs (Because She Has Fourteen)",
+  "kicker": "The Gift Edit",
+  "description": "Teacher gifts that aren't mugs: a YETI tumbler, UGG slippers, a Kindle, a spa basket and more. Eight Christmas teacher gift ideas she'll actually use, all with great reviews.",
+  "image": "images/blog/gifts-teacher/01-yeti.jpg",
+  "date": "October 6, 2026"
  }
 ]
