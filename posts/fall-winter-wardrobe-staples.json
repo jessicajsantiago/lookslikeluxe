@@ -3,7 +3,7 @@
   "title": "Fall and Winter Wardrobe Staples",
   "headline": "Fall and Winter Wardrobe Staples From Amazon That Look Way More Expensive Than They Are",
   "seo_title": "Fall & Winter Wardrobe Staples on Amazon: 8 Trend-Right Picks Under $130 | Looks Like Luxe",
-  "description": "Fall and winter 2026 wardrobe staples on Amazon: a puffer, peacoat, faux-leather jacket, boots, a turtleneck, a gold-buckle belt and a plaid scarf. Eight picks rated 4.4 stars or higher.",
+  "description": "Fall and winter 2026 wardrobe staples on Amazon: a puffer, a faux shearling jacket, a faux-leather jacket, boots, a turtleneck, a gold-buckle belt and a plaid scarf. Eight picks rated 4.3 stars or higher.",
   "kicker": "The Style Edit",
   "date": "October 10, 2026",
   "read_time": "5 min read",
@@ -11,7 +11,7 @@
   "intro": [
     "Every fall, the internet decides which colors are in, which coats you need, and which boots you must own by Thursday. This year the mood is dark romance: burgundy, bottle green, structured coats, a little leather, a lot of texture.",
     "The runway versions cost the price of a used car. The Amazon versions cost the price of a nice dinner. Same energy, fewer regrets.",
-    "I went through Amazon and built a capsule of eight pieces that hit the season's trends: outerwear, boots, one good knit and the accessories that make an outfit look expensive. Every one is rated 4.4 stars or higher with thousands of reviews, though sizing varies, so read the reviews for fit.",
+    "I went through Amazon and built a capsule of eight pieces that hit the season's trends: outerwear, boots, one good knit and the accessories that make an outfit look expensive. Every one is rated 4.3 stars or higher with thousands of reviews, though sizing varies, so read the reviews for fit.",
     "Let's get you dressed, darling."
   ],
   "disclosure": "As an Amazon Associate I earn from qualifying purchases, which means if you tap a link and buy, I may earn a small commission at no extra cost to you. Prices and availability live on Amazon.",
@@ -28,24 +28,24 @@
       ]
     },
     {
-      "asin": "B0C2KDZCNT",
-      "name": "Women's Wool Coat Notch Lapel Double-Breasted Peacoat",
-      "image": "images/blog/fall-wardrobe/02-wool-peacoat.jpg",
-      "best_for": "The tailored, old-money look that is everywhere this season",
+      "asin": "B07WPZ4DTG",
+      "name": "Women's Faux Shearling Teddy Jacket",
+      "image": "images/blog/fall-wardrobe/02-faux-shearling-jacket.jpg",
+      "best_for": "Texture, the season's biggest word",
       "copy": [
-        "A double-breasted peacoat with a notched lapel, the kind of structured outerwear fashion editors keep calling a must for fall.",
-        "It rates 4.4 stars from more than 4,000 reviewers. Read the reviews on sizing.",
-        "Verdict: instantly makes jeans and a tee look intentional."
+        "A fluffy faux shearling jacket with pockets and a zip front. Shearling and fuzzy textures are all over this season's trend reports.",
+        "It has a 4.4-star rating from more than 1,400 reviewers, at a price that's easy on the wallet.",
+        "Verdict: the cozy, cropped layer that turns jeans and boots into an outfit."
       ]
     },
     {
-      "asin": "B08GX5K96F",
-      "name": "Women's Lapel Faux Leather Moto Jacket",
+      "asin": "B01DXANRTE",
+      "name": "Tanming Women's Faux Leather Moto Jacket",
       "image": "images/blog/fall-wardrobe/03-faux-leather-moto.jpg",
       "best_for": "Dark romance on a budget",
       "copy": [
         "A classic moto jacket in faux leather. Leather and moto details are all over this season's trends.",
-        "It has a 4.4-star rating from nearly 5,000 reviewers and comes in several colors.",
+        "It has a 4.3-star rating from more than 10,000 reviewers, a big sample for a jacket at this price. Check the size chart.",
         "Verdict: throw it over a slip dress or a turtleneck and you're done."
       ]
     },
@@ -116,17 +116,32 @@
   ],
   "pin": {
     "kicker": "THE STYLE EDIT",
-    "h1": ["Fall & Winter", "Wardrobe Staples"],
+    "h1": [
+      "Fall & Winter",
+      "Wardrobe Staples"
+    ],
     "sub": "(dark romance, small budget)",
-    "tile": ["dress", "up"],
+    "tile": [
+      "dress",
+      "up"
+    ],
     "cta1": "READ THE GUIDE",
     "hero_kicker": "FALL & WINTER 2026 CAPSULE",
-    "hero_lines": ["8 Wardrobe", "Staples That Look", "Expensive"],
+    "hero_lines": [
+      "8 Wardrobe",
+      "Staples That Look",
+      "Expensive"
+    ],
     "hero_tag": "coats. boots. a little drama.",
     "cta2": "GET THE LIST",
     "cta3": "SHOP ALL 8",
     "hero_index": 1,
-    "small_idx": [0, 2, 3, 6]
+    "small_idx": [
+      0,
+      2,
+      3,
+      6
+    ]
   },
   "related": [
     {
