@@ -27,6 +27,7 @@ SETS = {
     'fall-makeup': ('images/blog/fall-makeup', 'AMAZON BEAUTY FINDS', ['Dark Romantic', 'Fall Makeup'], '', 'SHOP THE LIST'),
     'hair-scalp': ('images/blog/hair-scalp', 'AMAZON HAIR FINDS', ['Best Hair Care', 'on Amazon'], '', 'SHOP THE LIST'),
     'fall-wardrobe': ('images/blog/fall-wardrobe', 'AMAZON STYLE FINDS', ['Fall & Winter', 'Wardrobe Staples'], '', 'SHOP THE LIST'),
+    'vitamins': ('images/blog/vitamins', 'AMAZON WELLNESS FINDS', ['Vitamins for Women', 'in Their 30s'], '', 'SHOP THE LIST'),
 }
 
 src = Image.open('brand/profile-monogram.png').convert('RGB')
