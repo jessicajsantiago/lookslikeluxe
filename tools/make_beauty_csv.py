@@ -1,0 +1,82 @@
+"""Mightypreneur ADVANCED bulk CSVs for the Oct 10 round (perfume, makeup, hair, wardrobe).
+Usage: python tools/make_beauty_csv.py   -> pins-beauty-lll.csv (Looks Like Luxe), pins-beauty-personal.csv (@PrettyGirlsLoveJess)
+LLL gets blog pin v1 + choc collage (direct to Amazon list) + blog pin v2 per topic; the personal account gets DIFFERENT art
+(blog pin v3 + cream collage) with different titles, a few days later (Pinterest dislikes identical duplicate pins).
+Times are Eastern; the importer reads CSV times as Pacific so subtract 3h. Board is chosen on the review screen."""
+import csv, sys, datetime as dt
+sys.path.insert(0, 'tools')
+from make_pin_csv import ROW1, ROW2
+
+IMG = "https://raw.githubusercontent.com/jessicajsantiago/lookslikeluxe/main/pins"
+BLOG = "lookslikeluxe.netlify.app/blog"
+AMZ = "www.amazon.com/shop/influencer-bb664b2f/list/{id}?linkCode=spc&tag=lookslikeluxe-20&domainId=influencer"
+D = " As an Amazon Associate I earn from qualifying purchases."
+
+T = {
+ 'perfume': dict(id='1L4ZS0OCH8V2Z', slug='perfume-layering-combos', col='perfume-layering'),
+ 'makeup':  dict(id='BKAGDPVS1KN8', slug='dark-romantic-fall-makeup', col='fall-makeup'),
+ 'hair':    dict(id='18KAB1CTOA2DH', slug='hair-scalp-care', col='hair-scalp'),
+ 'wardrobe': dict(id='2R7FT7BWKFT95', slug='fall-winter-wardrobe-staples', col='fall-wardrobe'),
+}
+
+# (topic, kind, image, title, description). kind: 'blog' -> link to post, 'amz' -> link to the Idea List
+LLL = [
+ ('perfume', 'blog', 'perfume-layering-combos-v1-grid.png', 'Perfume Layering Combos: 8 Scents That Smell Expensive Together',
+  'Perfume layering is the fall 2026 beauty trend. Warm vanilla, sweet gourmand and floral scents plus a body cream to stack them on. Eight Amazon finds with great reviews. Tap for the full guide.' + D + ' #perfumelayering #fragrance #amazonbeauty'),
+ ('perfume', 'amz', 'collage-perfume-layering-choc.png', 'Amazon Perfume Layering Combos That Smell Expensive',
+  'Amazon perfume layering combos for fall: Ariana Grande Cloud, Lattafa Khamrah, Sol de Janeiro Cheirosa 62 and more. All on my Amazon storefront. Tap the pin for the full list.' + D + ' #perfumelayering #amazonfinds #fragrancetok'),
+ ('perfume', 'blog', 'perfume-layering-combos-v2-hero.png', 'Best Perfume Layering Combos for Fall 2026 (Vanilla, Warm and Sweet)',
+  'The best perfume layering combos for fall 2026: start with a body cream, add a vanilla base and finish with one bold note. Eight Amazon picks rated 4.4 stars or higher.' + D + ' #fallperfume #vanillaperfume #scentlayering'),
+ ('makeup', 'blog', 'dark-romantic-fall-makeup-v1-grid.png', 'Dark Romantic Fall Makeup: Cream Blush, Berry Lips and More',
+  'Dark romantic makeup is the look of fall 2026: soft cream blush, berry lips, black nails and a setting spray to lock it in. Eight Amazon finds with great reviews. Tap for the guide.' + D + ' #darkromantic #fallmakeup #amazonbeauty'),
+ ('makeup', 'amz', 'collage-fall-makeup-choc.png', 'Amazon Dark Romantic Makeup Finds for Fall 2026',
+  'Amazon dark romantic makeup finds: Rare Beauty liquid blush, Fenty Gloss Bomb Heat, Maybelline Matte Ink, black nail polish and more. All on my Amazon storefront. Tap the pin for the list.' + D + ' #fallmakeup #amazonfinds #makeupmusthaves'),
+ ('makeup', 'blog', 'dark-romantic-fall-makeup-v2-hero.png', 'Fall Makeup Trends 2026: The Dark Romantic Look on a Budget',
+  'Fall makeup trends 2026 are moody and pretty: cream blush, deep berry lips and a little smudge. Recreate the dark romantic look with eight Amazon finds. See all 8.' + D + ' #makeuptrends #berrylips #creamblush'),
+ ('hair', 'blog', 'hair-scalp-care-v1-grid.png', 'Best Hair Care Products on Amazon: Scalp Care, Shine and Repair',
+  'Scalp care is the new skincare. A simple hair routine from Amazon: scalp massager, rosemary oil, bond repair, shine oil and a blowout tool. Eight picks rated 4.5 stars or higher. Tap for the guide.' + D + ' #haircare #scalpcare #amazonfinds'),
+ ('hair', 'amz', 'collage-hair-scalp-choc.png', 'Amazon Hair Care Finds: Scalp, Shine and Repair',
+  'Amazon hair care finds: Olaplex, Moroccanoil, a Revlon dryer brush, a scalp massager and more. All on my Amazon storefront. Tap the pin for the full list.' + D + ' #haircareroutine #amazonhaircare #scalpmassage'),
+ ('hair', 'blog', 'hair-scalp-care-v2-hero.png', 'Scalp Care Is the New Skincare: 8 Hair Finds on Amazon',
+  'Scalp care is trending. These eight Amazon hair finds cover the scalp, repair and shine, from a silicone massager to a salon-style oil. See the full list.' + D + ' #scalpmassage #hairoil #haircare'),
+ ('wardrobe', 'blog', 'fall-winter-wardrobe-staples-v1-grid.png', 'Fall and Winter Wardrobe Staples From Amazon (Look Expensive for Less)',
+  'Dark romance is the mood of fall and winter 2026. Eight Amazon wardrobe staples: a puffer, a faux leather jacket, boots, a turtleneck, a gold belt and more. Tap for the guide.' + D + ' #fallfashion #wardrobestaples #amazonfashion'),
+ ('wardrobe', 'amz', 'collage-fall-wardrobe-choc.png', 'Amazon Fall Wardrobe Staples: Coats, Boots and Belts',
+  'Amazon fall wardrobe staples for a capsule that looks expensive: outerwear, boots, a turtleneck and accessories. All on my Amazon storefront. Tap the pin for the list.' + D + ' #amazonfashion #fallcapsule #fallwardrobe'),
+ ('wardrobe', 'blog', 'fall-winter-wardrobe-staples-v2-hero.png', 'Fall Outfit Essentials 2026: 8 Amazon Wardrobe Staples',
+  'Fall outfit essentials for 2026, all from Amazon: coats, boots, a classic turtleneck and the accessories that finish a look. See all 8 picks.' + D + ' #falloutfits #winterwardrobe #amazonfinds'),
+]
+PERSONAL = [
+ ('perfume', 'blog', 'perfume-layering-combos-v3-list.png', 'Perfume Layering Ideas: Vanilla, Gourmand and Floral Combos',
+  'Perfume layering ideas for fall: build a signature scent from a body cream, a sweet vanilla base and a floral top note. Eight Amazon finds with great reviews. Tap to browse.' + D + ' #perfumeideas #layeringperfume #beautyfinds'),
+ ('perfume', 'amz', 'collage-perfume-layering-cream.png', 'Amazon Perfume Finds for Layering (Sweet, Warm and Floral)',
+  'Sweet, warm and floral perfumes from Amazon that are made for layering. Tap the pin to shop the list on my Amazon storefront.' + D + ' #amazonperfume #fragrance #giftideasforher'),
+ ('makeup', 'blog', 'dark-romantic-fall-makeup-v3-list.png', 'Dark Romantic Makeup Ideas for Fall: Berry Lips and Soft Blush',
+  'Dark romantic makeup ideas for fall: soft blush, berry lips, black nails and a long-wear setting spray. Eight beauty finds from Amazon. Tap to browse.' + D + ' #makeupideas #fallbeauty #berrylips'),
+ ('makeup', 'amz', 'collage-fall-makeup-cream.png', 'Fall Makeup Must Haves From Amazon',
+  'Fall makeup must haves from Amazon, from cream blush to long-wear lips. Tap the pin to shop the list on my Amazon storefront.' + D + ' #makeupmusthaves #amazonmakeup #fallmakeuplook'),
+ ('hair', 'blog', 'hair-scalp-care-v3-list.png', 'Hair Care Routine Ideas: Scalp, Repair and Shine From Amazon',
+  'Hair care routine ideas from Amazon: a scalp massager, rosemary oil, bond repair, shine oil and a blowout tool. Eight picks with great reviews. Tap to browse.' + D + ' #hairroutine #hairproducts #amazonbeauty'),
+ ('hair', 'amz', 'collage-hair-scalp-cream.png', 'Amazon Hair Care Must Haves for Healthy-Looking Hair',
+  'Amazon hair care must haves for shine, softness and a happy scalp. Tap the pin to shop the list on my Amazon storefront.' + D + ' #hairproducts #amazonfinds #hairtok'),
+ ('wardrobe', 'blog', 'fall-winter-wardrobe-staples-v3-list.png', 'Fall Capsule Wardrobe Ideas From Amazon',
+  'Fall capsule wardrobe ideas from Amazon: a puffer, a faux leather jacket, boots, a turtleneck and a gold belt. Eight pieces that look more expensive than they are. Tap to browse.' + D + ' #capsulewardrobe #fallfashion #amazonfashion'),
+ ('wardrobe', 'amz', 'collage-fall-wardrobe-cream.png', 'Amazon Winter Outfit Essentials (Coats, Boots, Accessories)',
+  'Winter outfit essentials from Amazon: warm outerwear, boots and accessories that finish a look. Tap the pin to shop the list on my Amazon storefront.' + D + ' #winteroutfits #amazonstyle #wardrobeessentials'),
+]
+
+def write(path, pins, start, slots):
+    rows = [ROW1, ROW2]; i = 0
+    for topic, kind, img, title, desc in pins:
+        day = start + dt.timedelta(days=i // len(slots)); h, m = slots[i % len(slots)]
+        et = dt.datetime(day.year, day.month, day.day, h, m); pt = et - dt.timedelta(hours=3); i += 1
+        t = T[topic]; link = AMZ.format(id=t['id']) if kind == 'amz' else f"{BLOG}/{t['slug']}.html"
+        assert len(title) <= 100 and len(desc) <= 500, (title, len(title), len(desc))
+        r = [""] * 40
+        r[0] = pt.strftime("%Y-%m-%d %H:%M:%S"); r[1] = desc; r[3] = f"{IMG}/{img}"; r[7] = "false"; r[8] = "false"; r[38] = title; r[39] = link
+        rows.append(r); print(path, et.strftime("%a %b %d %I:%M %p ET"), topic, kind, img)
+    with open(path, "w", newline="", encoding="utf-8") as f: csv.writer(f).writerows(rows)
+
+if __name__ == '__main__':
+    write('pins-beauty-lll.csv', LLL, dt.date(2026, 10, 11), [(11, 30), (21, 0)])
+    write('pins-beauty-personal.csv', PERSONAL, dt.date(2026, 10, 13), [(12, 30)])

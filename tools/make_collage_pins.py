@@ -23,6 +23,10 @@ SETS = {
     'gifts-teacher': ('images/blog/gifts-teacher', 'AMAZON GIFT FINDS', ['Teacher Gifts', "That Aren't Mugs"], '', 'SHOP THE LIST'),
     'gifts-mom': ('images/blog/gifts-mom', 'AMAZON GIFT FINDS', ['Christmas Gifts', 'for Mom'], '', 'SHOP THE LIST'),
     'cozy-fall': ('images/cozy-fall', 'AMAZON HOME FINDS', ['Cozy Fall', 'Home Decor'], 'looks designer. isn\'t.', 'SHOP THE LIST'),
+    'perfume-layering': ('images/blog/perfume-layering', 'AMAZON BEAUTY FINDS', ['Perfume', 'Layering Combos'], '', 'SHOP THE LIST'),
+    'fall-makeup': ('images/blog/fall-makeup', 'AMAZON BEAUTY FINDS', ['Dark Romantic', 'Fall Makeup'], '', 'SHOP THE LIST'),
+    'hair-scalp': ('images/blog/hair-scalp', 'AMAZON HAIR FINDS', ['Best Hair Care', 'on Amazon'], '', 'SHOP THE LIST'),
+    'fall-wardrobe': ('images/blog/fall-wardrobe', 'AMAZON STYLE FINDS', ['Fall & Winter', 'Wardrobe Staples'], '', 'SHOP THE LIST'),
 }
 
 src = Image.open('brand/profile-monogram.png').convert('RGB')
@@ -52,7 +56,7 @@ def photo_card(im, size=620):
     c.putalpha(m); return c
 
 
-CARDS = {'clean-girl': {2, 6}, 'gifts-mom': {1, 2, 6, 7}, 'gifts-teacher': {2, 3, 4, 5, 6, 7}, 'christmas-decor': {3, 4, 5, 6, 7}}   # product shots with white parts that cut out badly -> rounded photo cards
+CARDS = {'perfume-layering': {1, 2, 3}, 'fall-makeup': {1}, 'hair-scalp': {0}, 'clean-girl': {2, 6}, 'gifts-mom': {1, 2, 6, 7}, 'gifts-teacher': {2, 3, 4, 5, 6, 7}, 'christmas-decor': {3, 4, 5, 6, 7}}   # product shots with white parts that cut out badly -> rounded photo cards
 
 
 def cutout(path, force_card=False):
