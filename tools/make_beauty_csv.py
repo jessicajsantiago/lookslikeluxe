@@ -143,5 +143,5 @@ PERSONAL4 = [
 ]
 
 if __name__ == '__main__' and len(sys.argv) > 1 and sys.argv[1] == 'round4':
-    write('pins-round4-lll.csv', LLL4, dt.date(2026, 10, 20), [(11, 30), (21, 0)])
-    write('pins-round4-personal.csv', PERSONAL4, dt.date(2026, 10, 25), [(12, 30)])
+    write('pins-round4-lll.csv', LLL4, dt.date(2026, 10, 13), [(8, 0)])
+    write('pins-round4-personal.csv', PERSONAL4, dt.date(2026, 10, 15), [(18, 30)])
