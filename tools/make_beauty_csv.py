@@ -80,3 +80,36 @@ def write(path, pins, start, slots):
 if __name__ == '__main__':
     write('pins-beauty-lll.csv', LLL, dt.date(2026, 10, 11), [(11, 30), (21, 0)])
     write('pins-beauty-personal.csv', PERSONAL, dt.date(2026, 10, 13), [(12, 30)])
+
+
+# ---- Round 3: gifts under $100 + holiday gift guide ----
+T['gifts100'] = dict(id='693H5MH6IX80', slug='gifts-under-100-for-her', col='gifts-100')
+T['holiday'] = dict(id='12ZPTJW3RR36H', slug='holiday-gift-guide-for-her', col='holiday-her')
+LLL3 = [
+ ('gifts100', 'blog', 'gifts-under-100-for-her-v1-grid.png', 'Amazon Gifts Under $100 for Her That Look Expensive',
+  'Eight Amazon gifts under $100 that look like a splurge: Sol de Janeiro, Tatcha, an Instax camera, a Stanley tumbler, a NEST candle and more. Prices change, so check before you buy. Tap for the full guide.' + D + ' #giftsforher #giftsunder100 #amazongifts'),
+ ('gifts100', 'amz', 'collage-gifts-100-choc.png', 'Amazon Gifts Under $100 That Look Way More Expensive',
+  'Luxe-looking Amazon gift ideas for her, all under $100 when I checked. All on my Amazon storefront. Tap the pin for the full list.' + D + ' #giftguide #amazonfinds #christmasgiftideas'),
+ ('gifts100', 'blog', 'gifts-under-100-for-her-v2-hero.png', 'Best Gifts Under $100 for Her: 8 Luxe-Looking Ideas',
+  'The best gifts under $100 for her this holiday season, from skincare and perfume to a mini lamp and a cozy throw. Eight well-reviewed Amazon picks. See the guide.' + D + ' #bestgifts #giftideasforher #holidaygifts'),
+ ('holiday', 'blog', 'holiday-gift-guide-for-her-v1-grid.png', 'Holiday Gift Guide for Her 2026: Stocking Stuffers to Splurges',
+  'The holiday gift guide for her: stocking stuffers, cozy treats and a few splurges, from Laneige and satin pillowcases to UGG slippers and a Kindle. Eight Amazon picks rated 4.4 stars or higher.' + D + ' #holidaygiftguide #giftsforher #stockingstuffers'),
+ ('holiday', 'amz', 'collage-holiday-her-choc.png', 'Amazon Holiday Gift Guide for Her: 8 Gift Ideas',
+  'Amazon holiday gift ideas for her in three tiers: stocking stuffers, treats and splurges. All on my Amazon storefront. Tap the pin for the full list.' + D + ' #christmasgifts #amazonfinds #giftguide'),
+ ('holiday', 'blog', 'holiday-gift-guide-for-her-v2-hero.png', 'Christmas Gift Ideas for Her 2026: Cozy, Beauty and Splurge Picks',
+  'Christmas gift ideas for her that feel thoughtful: a satin robe, UGG slippers, a Kindle, a massage gun and more. Eight Amazon picks with real reviews. See all 8.' + D + ' #christmasgiftideas #giftsforwomen #holidaygifts'),
+]
+PERSONAL3 = [
+ ('gifts100', 'blog', 'gifts-under-100-for-her-v3-list.png', 'Gift Ideas for Her Under $100 (Luxe-Looking Picks From Amazon)',
+  'Gift ideas for her under $100: skincare, perfume, a camera, a tumbler and cozy home finds. Eight Amazon picks with great reviews. Tap to browse.' + D + ' #giftideasforher #affordablegifts #holidaygifts'),
+ ('gifts100', 'amz', 'collage-gifts-100-cream.png', 'Amazon Gift Ideas for Her That Look Expensive',
+  'Amazon gift ideas for her that look way more expensive than they are. Tap the pin to shop the list on my Amazon storefront.' + D + ' #amazongiftideas #giftsforher #luxegifts'),
+ ('holiday', 'blog', 'holiday-gift-guide-for-her-v3-list.png', 'Holiday Gift Ideas for Her: Stocking Stuffers to Splurges',
+  'Holiday gift ideas for her in three budgets: stocking stuffers, treats and splurges. Eight Amazon picks with real reviews. Tap to browse.' + D + ' #holidaygiftideas #stockingstuffers #giftsforwomen'),
+ ('holiday', 'amz', 'collage-holiday-her-cream.png', 'Amazon Christmas Gifts for Her 2026',
+  'Amazon Christmas gifts for her, from lip balm to a Kindle. Tap the pin to shop the list on my Amazon storefront.' + D + ' #christmasgiftsforher #amazonfinds #giftguide'),
+]
+
+if __name__ == '__main__' and len(sys.argv) > 1 and sys.argv[1] == 'round3':
+    write('pins-gifts-lll.csv', LLL3, dt.date(2026, 10, 17), [(11, 30), (21, 0)])
+    write('pins-gifts-personal.csv', PERSONAL3, dt.date(2026, 10, 21), [(12, 30)])
