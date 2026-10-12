@@ -113,3 +113,35 @@ PERSONAL3 = [
 if __name__ == '__main__' and len(sys.argv) > 1 and sys.argv[1] == 'round3':
     write('pins-gifts-lll.csv', LLL3, dt.date(2026, 10, 17), [(11, 30), (21, 0)])
     write('pins-gifts-personal.csv', PERSONAL3, dt.date(2026, 10, 21), [(12, 30)])
+
+
+# ---- Round 4: teen gifts, best friend gifts, luxe finds for less ----
+T['teen'] = dict(id=None, slug='gifts-for-teen-girls', col='gifts-teen')
+T['bff'] = dict(id=None, slug='gifts-for-best-friend', col='gifts-bff')
+T['dupes'] = dict(id=None, slug='luxe-looking-amazon-finds-for-less', col='dupes')
+LLL4 = [
+ ('teen', 'blog', 'gifts-for-teen-girls-v1-grid.png', 'Gifts for Teen Girls 2026: 8 Amazon Ideas She Will Actually Use',
+  'Gifts for teen girls that are not cringe: LED lights, a Laneige lip mask, a heart waffle maker, an instant camera, Crocs and more. Eight Amazon picks with great reviews. Tap for the guide.' + D + ' #giftsforteengirls #teengifts #christmasgiftideas'),
+ ('bff', 'blog', 'gifts-for-best-friend-v1-grid.png', 'Gifts for Your Best Friend: 8 Amazon Ideas She Will Love',
+  'Gifts for your best friend: a jewelry tray, pearl hair clips, a NEST candle, a mini lamp, a Sol de Janeiro mist and more. Eight Amazon picks with real reviews. Tap for the full guide.' + D + ' #giftsforbestfriend #bestfriendgifts #giftideas'),
+ ('dupes', 'blog', 'luxe-looking-amazon-finds-for-less-v1-grid.png', 'Luxe-Looking Beauty Finds for Less: 8 Budget Picks on Amazon',
+  'Rich-girl taste, real-girl budget. Eight affordable beauty and hair finds with a designer vibe: a glow filter, a viral mascara, a warm vanilla perfume and more. Tap for the guide.' + D + ' #beautyfinds #budgetbeauty #amazonbeauty'),
+ ('teen', 'blog', 'gifts-for-teen-girls-v2-hero.png', 'Best Gifts for Teenage Girls: Cozy, Cute and Not Cringe',
+  'The best gifts for teenage girls this Christmas, from room upgrades to small beauty treats. Eight Amazon picks rated 4.4 stars or higher. See all 8.' + D + ' #giftsforteens #teengiftideas #holidaygifts'),
+ ('bff', 'blog', 'gifts-for-best-friend-v2-hero.png', 'Best Friend Gift Ideas: Pretty, Cozy and a Little Dramatic',
+  'Best friend gift ideas that feel personal without being weird. Eight Amazon picks, from jewelry trays to cozy lamps. See the full guide.' + D + ' #bestfriendgiftideas #giftsforher #christmasgifts'),
+ ('dupes', 'blog', 'luxe-looking-amazon-finds-for-less-v2-hero.png', 'Budget Beauty Finds That Look Expensive (Amazon Edition)',
+  'Budget beauty and hair finds that give a luxe feel for less. Eight well-reviewed Amazon picks. See the guide.' + D + ' #dupes #drugstoremakeup #beautyhacks'),
+]
+PERSONAL4 = [
+ ('teen', 'blog', 'gifts-for-teen-girls-v3-list.png', 'Gift Ideas for Teen Girls (Cozy, Cute, Not Cringe)',
+  'Gift ideas for teen girls: LED lights, Laneige, Crocs, an instant camera and more. Eight Amazon picks with great reviews. Tap to browse.' + D + ' #teengiftideas #giftsforgirls #christmasgifts'),
+ ('bff', 'blog', 'gifts-for-best-friend-v3-list.png', 'Gift Ideas for Your Bestie: Eight Amazon Picks',
+  'Gift ideas for your bestie, from a jewelry tray to a cozy mini lamp. Eight Amazon picks with real reviews. Tap to browse.' + D + ' #bestiegifts #giftideasforher #holidaygifts'),
+ ('dupes', 'blog', 'luxe-looking-amazon-finds-for-less-v3-list.png', 'Luxe-Looking Beauty Finds on a Budget',
+  'Luxe-looking beauty and hair finds on a budget, all with great Amazon reviews. Tap to browse the list.' + D + ' #budgetbeauty #beautyfinds #amazonfinds'),
+]
+
+if __name__ == '__main__' and len(sys.argv) > 1 and sys.argv[1] == 'round4':
+    write('pins-round4-lll.csv', LLL4, dt.date(2026, 10, 20), [(11, 30), (21, 0)])
+    write('pins-round4-personal.csv', PERSONAL4, dt.date(2026, 10, 25), [(12, 30)])
