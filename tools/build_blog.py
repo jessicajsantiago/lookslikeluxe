@@ -1,7 +1,7 @@
 """Build the Looks Like Luxe blog: posts/*.json -> blog/<slug>.html, blog/index.html, sitemap.xml.
 Run from the project root:  python tools/build_blog.py
 Add a post by dropping a JSON file in posts/ (see gifts-for-5-year-old-girls.json for the shape)."""
-import glob, html, json, os
+import glob, html, json, os, datetime
 
 SITE = "https://lookslikeluxe.netlify.app"
 TAG = "lookslikeluxe-20"
@@ -28,8 +28,17 @@ def footer():
             'Product names are trademarks of their owners.<br><a href="/privacy.html">Privacy &amp; disclosure</a></footer>')
 
 
-def page(title, desc, body, canonical, og_image=None):
+def page(title, desc, body, canonical, og_image=None, article=None):
     og = f'<meta property="og:image" content="{SITE}/{og_image}">' if og_image else ""
+    og += f'<meta property="og:url" content="{SITE}{canonical}"><meta property="og:site_name" content="Looks Like Luxe"><meta name="twitter:card" content="summary_large_image">'
+    if article:   # Rich Pin (article) + search metadata
+        iso = datetime.datetime.strptime(article["date"], "%B %d, %Y").strftime("%Y-%m-%dT09:00:00-04:00")
+        og += f'<meta property="article:published_time" content="{iso}"><meta property="article:author" content="Looks Like Luxe">'
+        ld = {"@context": "https://schema.org", "@type": "Article", "headline": article["headline"], "description": desc, "datePublished": iso,
+              "author": {"@type": "Organization", "name": "Looks Like Luxe"}, "publisher": {"@type": "Organization", "name": "Looks Like Luxe"},
+              "mainEntityOfPage": f"{SITE}{canonical}"}
+        if og_image: ld["image"] = f"{SITE}/{og_image}"
+        og += '<script type="application/ld+json">' + json.dumps(ld).replace("</", "<\/") + '</script>'
     return (f'<!doctype html><html lang="en"><head><meta name="p:domain_verify" content="d852d5229a38dea863881f54dfc11f45"/><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
             f'<title>{e(title)}</title><meta name="description" content="{e(desc)}"><link rel="canonical" href="{SITE}{canonical}">'
             f'<meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:type" content="article">{og}'
@@ -60,7 +69,7 @@ def build_post(p):
             f'<div class="b-sep">&#9830; &#9830; &#9830;</div><div class="b-outro">{outro}<div class="b-sign">xx, Looks Like Luxe</div></div>'
             f'<section class="b-signup"><h2>Get The Luxe Gift Vault, free</h2><p>A printable holiday gift planner plus 25 gifts that look like you spent way more, and one fun email a week. Zero spam. Zero sad candles.</p><div class="form">{GHL_FORM}</div></section>'
             f'<section class="b-related"><h3>Keep reading</h3>{related}</section></main>' + footer())
-    return page(p["seo_title"], p["description"], body, f'/blog/{p["slug"]}.html', p.get("pin_image"))
+    return page(p["seo_title"], p["description"], body, f'/blog/{p["slug"]}.html', p.get("pin_image"), {"date": p["date"], "headline": p["headline"]})
 
 
 def build_index(posts):
