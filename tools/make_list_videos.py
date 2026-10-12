@@ -43,6 +43,36 @@ VIDEOS = {
                ('Flameless Taper Candles', 'Candlelight, zero fire risk.'),
                ('Burgundy Velvet Bows', 'Your tree, wearing velvet.'),
                ('Gold Reindeer Pair', 'A little brass in the lineup.')]),
+    'perfume-layering': dict(
+        folder='images/blog/perfume-layering', kicker='AMAZON BEAUTY FINDS', hook=['Perfume', 'Layering Combos'], hook_sub='sweet, warm and a little dramatic',
+        items=[('Ariana Grande Cloud', 'The sweet base layer.'), ('Lattafa Khamrah', 'Warm spice, vanilla and amber.'), ('Lattafa Yara', 'Spray plus a roll-on oil.'),
+               ('Billie Eilish Eau de Parfum', 'Sugared petals and musk.'), ('Sol de Janeiro Cheirosa 62', 'The mist everyone asks about.'),
+               ('Brazilian Bum Bum Cream', 'Moisturize first, mist second.'), ('Marc Jacobs Daisy', 'A fresh floral to balance the sweet.'), ('eos Vanilla Cashmere Mist', 'A cozy, budget-friendly layer.')]),
+    'fall-makeup': dict(
+        folder='images/blog/fall-makeup', kicker='AMAZON BEAUTY FINDS', hook=['Dark Romantic', 'Fall Makeup'], hook_sub='moody, but make it pretty',
+        items=[('Rare Beauty Soft Pinch Blush', 'The liquid blush everyone is blending.'), ('e.l.f. Monochromatic Stick', 'Cheeks and lips, one swipe.'), ('Fenty Gloss Bomb Heat', 'Glassy lips, big shine.'),
+               ('Maybelline Super Stay Matte Ink', 'The long-wear berry lip.'), ('Rhode Peptide Lip Treatment', 'A glossy base for deeper shades.'), ('Urban Decay All Nighter Spray', 'Lock the whole look in place.'),
+               ('Laura Mercier Setting Powder', 'A soft-focus finish.'), ('OPI Nail Lacquer', 'Jet-black nails, instant drama.')]),
+    'hair-scalp': dict(
+        folder='images/blog/hair-scalp', kicker='AMAZON HAIR FINDS', hook=['Best Hair Care', 'on Amazon'], hook_sub='scalp first, then shine',
+        items=[('Revlon One-Step Volumizer', 'Dry and style in one pass.'), ('Moroccanoil Treatment', 'A few drops of shine.'), ('Kerastase Elixir Ultime', 'The pretty, refillable oil.'),
+               ('Olaplex No. 4 Shampoo', 'A bond-care classic.'), ('Olaplex No. 3 Plus', 'The weekly repair step.'), ('HEETA Scalp Massager', 'Join the scalp-care trend.'),
+               ('Mielle Rosemary Mint Oil', 'The oil all over social media.'), ('Satin Scrunchie Set', 'Gentler ponytails, cuter wrists.')]),
+    'fall-wardrobe': dict(
+        folder='images/blog/fall-wardrobe', kicker='AMAZON STYLE FINDS', hook=['Fall & Winter', 'Wardrobe Staples'], hook_sub='dark romance, small budget',
+        items=[('Orolay Down Jacket', 'The coat that got famous.'), ('Faux Shearling Jacket', 'Texture is the whole trend.'), ('Faux Leather Moto Jacket', 'Dark romance, done.'),
+               ('Over-the-Knee Suede Boots', 'Boots for every fall dress.'), ('Slip-On Chelsea Boots', 'Everyday boots, zero laces.'), ('Classic Turtleneck', 'The base layer under it all.'),
+               ('Gold-Buckle Leather Belt', 'Instantly looks styled.'), ('Plaid Blanket Scarf', 'Plaid is back.')]),
+    'gifts-100': dict(
+        folder='images/blog/gifts-100', kicker='AMAZON GIFT FINDS', hook=['Gifts Under $100', 'for Her'], hook_sub='she will never know',
+        items=[('Sol de Janeiro Cheirosa Mist', 'The scent everyone wants.'), ('Instax Mini 12 Camera', 'Tiny photos in seconds.'), ('Stanley Quencher 40 oz', 'A tumbler with a fan club.'),
+               ('Tatcha Dewy Skin Cream', 'A luxe-looking jar.'), ('NEST Bamboo Candle', 'A boutique candle on a budget.'), ("O'Bright Mini Cordless Lamp", 'Moody lighting, no outlet.'),
+               ('Chunky Knit Throw', 'Couch-and-movie-night energy.'), ('Revlon One-Step Styler', 'A blowout in one pass.')]),
+    'holiday-her': dict(
+        folder='images/blog/holiday-her', kicker='HOLIDAY GIFT GUIDE', hook=['Gifts for Her', 'Stocking Stuffers to Splurges'], hook_sub='2026 edition',
+        items=[('LANEIGE Lip Glowy Balm', 'Stocking stuffer.'), ('Kitsch Satin Pillowcases', 'Stocking stuffer.'), ('Satin Kimono Robe', 'Glam Christmas morning.'),
+               ('JBL Clip 5 Speaker', 'For the friend with the playlist.'), ('Heated Eye Mask', 'Self-care, cordless.'), ('UGG Tasman Slippers', 'The cozy splurge.'),
+               ('Therabody Massage Gun', 'A splurge that feels like a spa.'), ('Kindle Paperwhite', 'The bookworm splurge.')]),
 }
 
 # monogram background tile (same trick as the collage pins)

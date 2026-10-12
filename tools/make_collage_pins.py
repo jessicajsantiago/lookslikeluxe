@@ -28,6 +28,7 @@ SETS = {
     'hair-scalp': ('images/blog/hair-scalp', 'AMAZON HAIR FINDS', ['Best Hair Care', 'on Amazon'], '', 'SHOP THE LIST'),
     'fall-wardrobe': ('images/blog/fall-wardrobe', 'AMAZON STYLE FINDS', ['Fall & Winter', 'Wardrobe Staples'], '', 'SHOP THE LIST'),
     'gifts-100': ('images/blog/gifts-100', 'AMAZON GIFT FINDS', ['Gifts Under $100', 'for Her'], '', 'SHOP THE LIST'),
+    'holiday-her': ('images/blog/holiday-her', 'HOLIDAY GIFT GUIDE', ['Gifts for Her', '2026'], '', 'SHOP THE LIST'),
     'vitamins': ('images/blog/vitamins', 'AMAZON WELLNESS FINDS', ['Vitamins for Women', 'in Their 30s'], '', 'SHOP THE LIST'),
 }
 
