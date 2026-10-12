@@ -27,6 +27,7 @@ SETS = {
     'fall-makeup': ('images/blog/fall-makeup', 'AMAZON BEAUTY FINDS', ['Dark Romantic', 'Fall Makeup'], '', 'SHOP THE LIST'),
     'hair-scalp': ('images/blog/hair-scalp', 'AMAZON HAIR FINDS', ['Best Hair Care', 'on Amazon'], '', 'SHOP THE LIST'),
     'fall-wardrobe': ('images/blog/fall-wardrobe', 'AMAZON STYLE FINDS', ['Fall & Winter', 'Wardrobe Staples'], '', 'SHOP THE LIST'),
+    'gifts-100': ('images/blog/gifts-100', 'AMAZON GIFT FINDS', ['Gifts Under $100', 'for Her'], '', 'SHOP THE LIST'),
     'vitamins': ('images/blog/vitamins', 'AMAZON WELLNESS FINDS', ['Vitamins for Women', 'in Their 30s'], '', 'SHOP THE LIST'),
 }
 
@@ -57,7 +58,7 @@ def photo_card(im, size=620):
     c.putalpha(m); return c
 
 
-CARDS = {'perfume-layering': {1, 2, 3}, 'fall-makeup': {1}, 'hair-scalp': {0}, 'clean-girl': {2, 6}, 'gifts-mom': {1, 2, 6, 7}, 'gifts-teacher': {2, 3, 4, 5, 6, 7}, 'christmas-decor': {3, 4, 5, 6, 7}}   # product shots with white parts that cut out badly -> rounded photo cards
+CARDS = {'gifts-100': {0, 5}, 'perfume-layering': {1, 2, 3}, 'fall-makeup': {1}, 'hair-scalp': {0}, 'clean-girl': {2, 6}, 'gifts-mom': {1, 2, 6, 7}, 'gifts-teacher': {2, 3, 4, 5, 6, 7}, 'christmas-decor': {3, 4, 5, 6, 7}}   # product shots with white parts that cut out badly -> rounded photo cards
 
 
 def cutout(path, force_card=False):
