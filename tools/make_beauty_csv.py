@@ -177,3 +177,34 @@ PERSONAL5 = [
 if __name__ == '__main__' and len(sys.argv) > 1 and sys.argv[1] == 'round5':
     write('pins-round5-lll.csv', LLL5, dt.date(2026, 10, 14), [(13, 30)])
     write('pins-round5-personal.csv', PERSONAL5, dt.date(2026, 10, 18), [(10, 0)])
+
+
+# ---- Round 6: direct-link collage pins for newly approved lists ----
+T['teen'] = dict(id='27FKMKLOQU4SN', slug='gifts-for-teen-girls', col='gifts-teen')
+T['bff'] = dict(id='2GI3DRTAPTKWR', slug='gifts-for-best-friend', col='gifts-bff')
+T['dupes'] = dict(id='2839UTNNYKJSR', slug='luxe-looking-amazon-finds-for-less', col='dupes')
+T['vit'] = dict(id='2VJFZQRDAK6J1', slug='vitamins-supplements-women-30s', col='vitamins')
+LLL6 = [
+ ('teen', 'amz', 'collage-gifts-teen-choc.png', 'Amazon Gifts for Teen Girls That Are Not Cringe',
+  'Amazon gift ideas for teen girls: LED lights, a Laneige lip mask, a heart waffle maker, an instant camera, Crocs and more. All on my Amazon storefront. Tap the pin for the list.' + D + ' #giftsforteengirls #amazonfinds #christmasgiftideas'),
+ ('bff', 'amz', 'collage-gifts-bff-choc.png', 'Amazon Gifts for Your Best Friend She Will Love',
+  'Amazon gift ideas for your best friend: a jewelry tray, pearl hair clips, a NEST candle, a mini lamp and more. All on my Amazon storefront. Tap the pin for the list.' + D + ' #bestfriendgifts #amazonfinds #giftideas'),
+ ('dupes', 'amz', 'collage-dupes-choc.png', 'Amazon Luxe-Looking Beauty Finds for Less',
+  'Rich-girl taste, real-girl budget: affordable Amazon beauty and hair finds with a designer vibe. All on my Amazon storefront. Tap the pin for the list.' + D + ' #budgetbeauty #amazonbeauty #beautyfinds'),
+ ('vit', 'amz', 'collage-vitamins-choc.png', 'Amazon Vitamins and Supplements Women in Their 30s Are Buying',
+  'Popular, well-reviewed vitamins and supplements women in their 30s are shopping for on Amazon. Not medical advice; ask your doctor before starting anything new. All on my Amazon storefront.' + D + ' #womenswellness #amazonfinds #dailyvitamins'),
+]
+PERSONAL6 = [
+ ('teen', 'amz', 'collage-gifts-teen-cream.png', 'Amazon Gift Ideas for Teen Girls (Cozy and Cute)',
+  'Amazon gift ideas for teen girls, from room upgrades to small beauty treats. Tap the pin to shop the list on my Amazon storefront.' + D + ' #teengiftideas #amazongifts #giftsforgirls'),
+ ('bff', 'amz', 'collage-gifts-bff-cream.png', 'Amazon Gift Ideas for Your Bestie',
+  'Amazon gift ideas for your bestie: pretty, cozy and a little dramatic. Tap the pin to shop the list on my Amazon storefront.' + D + ' #bestiegifts #amazonfinds #giftideasforher'),
+ ('dupes', 'amz', 'collage-dupes-cream.png', 'Amazon Luxe-Looking Beauty Finds on a Budget',
+  'Budget beauty and hair finds with a luxe feel, all with great Amazon reviews. Tap the pin to shop the list on my Amazon storefront.' + D + ' #budgetbeauty #beautyfinds #amazonbeauty'),
+ ('vit', 'amz', 'collage-vitamins-cream.png', 'Amazon Vitamins and Supplements Roundup for Women in Their 30s',
+  'A roundup of popular vitamins and supplements for women in their 30s on Amazon. Not medical advice; talk to your doctor first. Tap the pin to shop the list on my Amazon storefront.' + D + ' #womenshealth #amazonfinds #wellnessroutine'),
+]
+
+if __name__ == '__main__' and len(sys.argv) > 1 and sys.argv[1] == 'round6':
+    write('pins-round6-lll.csv', LLL6, dt.date(2026, 10, 13), [(17, 30)])
+    write('pins-round6-personal.csv', PERSONAL6, dt.date(2026, 10, 14), [(14, 30)])
