@@ -145,3 +145,35 @@ PERSONAL4 = [
 if __name__ == '__main__' and len(sys.argv) > 1 and sys.argv[1] == 'round4':
     write('pins-round4-lll.csv', LLL4, dt.date(2026, 10, 13), [(8, 0)])
     write('pins-round4-personal.csv', PERSONAL4, dt.date(2026, 10, 15), [(18, 30)])
+
+
+# ---- Round 5: chocolate brown ----
+T['chochome'] = dict(id=None, slug='chocolate-brown-fall-home-decor', col='choc-home')
+T['chocxmas'] = dict(id=None, slug='chocolate-brown-christmas-decor', col='choc-xmas')
+T['chocstyle'] = dict(id=None, slug='chocolate-brown-fall-outfits', col='choc-style')
+LLL5 = [
+ ('chochome', 'blog', 'chocolate-brown-fall-home-decor-v1-grid.png', 'Chocolate Brown Fall Home Decor: 8 Amazon Finds That Look Expensive',
+  'Chocolate brown is the color of fall. Eight Amazon home finds: a chunky knit throw, velvet and boucle pillow covers, a faux fur rug, a cordless lamp and more. Choose the chocolate brown option on each page. Tap for the guide.' + D + ' #chocolatebrown #falldecor #cozyhome'),
+ ('chocxmas', 'blog', 'chocolate-brown-christmas-decor-v1-grid.png', 'Chocolate Brown Christmas Decor: Velvet Bows, Fur Tree Skirt and More',
+  'A chocolate brown Christmas looks warm, grown-up and rich: velvet bows, brown ornaments, a faux fur tree skirt and velvet ribbon. Eight Amazon finds with great reviews. Tap for the guide.' + D + ' #chocolatebrownchristmas #christmasdecor #holidaydecor'),
+ ('chocstyle', 'blog', 'chocolate-brown-fall-outfits-v1-grid.png', 'Chocolate Brown Fall Outfits: 8 Amazon Pieces for the Color of the Season',
+  'Chocolate brown fall style from Amazon: suede over-the-knee boots, a turtleneck, a cropped cardigan, a hobo bag and a faux leather jacket. Check the size chart on clothing. Tap for the guide.' + D + ' #chocolatebrown #falloutfits #fallfashion'),
+ ('chochome', 'blog', 'chocolate-brown-fall-home-decor-v2-hero.png', 'Brown Living Room Ideas for Fall: Velvet, Knit and Warm Light',
+  'Brown living room ideas for fall: layer three textures in one color, add a warm lamp and a faux fur rug. Eight Amazon picks, all rated 4.4 stars or higher. See the guide.' + D + ' #brownlivingroom #fallhomedecor #cozyfall'),
+ ('chocxmas', 'blog', 'chocolate-brown-christmas-decor-v2-hero.png', 'Brown Christmas Tree Ideas: Velvet Bows and Chocolate Ornaments',
+  'Brown Christmas tree ideas: velvet bows, chocolate ornaments and a faux fur skirt for a moody, warm holiday look. Eight Amazon picks. See the guide.' + D + ' #browntree #christmastreeideas #velvetbows'),
+ ('chocstyle', 'blog', 'chocolate-brown-fall-outfits-v2-hero.png', 'What to Wear With Chocolate Brown: Fall Outfit Pieces From Amazon',
+  'What to wear with chocolate brown this fall: boots, a turtleneck, a cardigan and a bag in the same rich shade. Eight Amazon picks. See the guide.' + D + ' #chocolatebrownoutfit #fallstyle #amazonfashion'),
+]
+PERSONAL5 = [
+ ('chochome', 'blog', 'chocolate-brown-fall-home-decor-v3-list.png', 'Chocolate Brown Home Decor Ideas for Fall (Amazon Finds)',
+  'Chocolate brown home decor ideas for fall: throws, velvet pillows, a faux fur rug and warm lighting. Eight Amazon picks with great reviews. Tap to browse.' + D + ' #brownhomedecor #falldecorideas #amazonhome'),
+ ('chocxmas', 'blog', 'chocolate-brown-christmas-decor-v3-list.png', 'Chocolate Brown Christmas Decor Ideas From Amazon',
+  'Chocolate brown Christmas decor ideas: velvet bows, ornaments, ribbon and a faux fur tree skirt. Eight Amazon picks. Tap to browse.' + D + ' #brownchristmas #christmasdecorideas #holidayhome'),
+ ('chocstyle', 'blog', 'chocolate-brown-fall-outfits-v3-list.png', 'Chocolate Brown Fall Outfit Ideas From Amazon',
+  'Chocolate brown fall outfit ideas: boots, a turtleneck, a cardigan, a bag and accessories. Eight Amazon picks with great reviews. Tap to browse.' + D + ' #brownoutfit #fallfashionideas #amazonfashion'),
+]
+
+if __name__ == '__main__' and len(sys.argv) > 1 and sys.argv[1] == 'round5':
+    write('pins-round5-lll.csv', LLL5, dt.date(2026, 10, 14), [(13, 30)])
+    write('pins-round5-personal.csv', PERSONAL5, dt.date(2026, 10, 18), [(10, 0)])
