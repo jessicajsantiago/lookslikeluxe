@@ -43,6 +43,16 @@ VIDEOS = {
                ('Flameless Taper Candles', 'Candlelight, zero fire risk.'),
                ('Burgundy Velvet Bows', 'Your tree, wearing velvet.'),
                ('Gold Reindeer Pair', 'A little brass in the lineup.')]),
+    'choc-style-edgy': dict(
+        folder='images/blog/choc-style-edgy', kicker='AMAZON STYLE FINDS', hook=['Chocolate Brown', 'Fall Fits'], hook_sub='a little edgy, a lot expensive-looking',
+        items=[('Faux Leather Trench', 'Long, dramatic and very main character.'), ('Faux Leather Moto Jacket', 'Cropped, belted, instantly edgier.'), ('Baggy Denim Jorts', 'Low-rise, wide-leg, street-style approved.'),
+               ('Knee-High Block Heel Boots', 'The boot that finishes the fit.'), ('Leather Lace-Up Halter', 'Night-out energy, zero effort.'), ('Oversized Leather Bomber', 'Throw it over anything.'),
+               ('Cropped Fleece Jacket', 'Cozy, cropped, coffee-colored.'), ('Slouchy Hobo Bag', 'The brown bag that ties it together.')]),
+    'choc-home': dict(
+        folder='images/blog/choc-home', kicker='AMAZON HOME FINDS', hook=['Chocolate Brown', 'Home Decor'], hook_sub='looks like Ralph Lauren. is Amazon.',
+        items=[('Chunky Knit Throw', 'The couch layer that does the most.'), ('Velvet Pillow Covers', 'Rich texture, instant depth.'), ('Boucle Pillow Covers', 'Creamy, cozy, a little sculptural.'),
+               ('Faux Fur Rug', 'Soft under every step.'), ('Cordless Table Lamp', 'Moody lighting, no outlet needed.'), ('Woven Baskets', 'Pretty storage that hides the clutter.'),
+               ('Wood Candle Holders', 'Warm wood for the mantel.'), ('Sherpa Pillow Covers', 'The cozy finishing touch.')]),
     'perfume-layering': dict(
         folder='images/blog/perfume-layering', kicker='AMAZON BEAUTY FINDS', hook=['Perfume', 'Layering Combos'], hook_sub='sweet, warm and a little dramatic',
         items=[('Ariana Grande Cloud', 'The sweet base layer.'), ('Lattafa Khamrah', 'Warm spice, vanilla and amber.'), ('Lattafa Yara', 'Spray plus a roll-on oil.'),

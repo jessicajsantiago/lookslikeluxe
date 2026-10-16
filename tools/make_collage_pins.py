@@ -35,6 +35,10 @@ SETS = {
     'choc-home': ('images/blog/choc-home', 'AMAZON HOME FINDS', ['Chocolate Brown', 'Fall Home Decor'], '', 'SHOP THE LIST'),
     'choc-xmas': ('images/blog/choc-xmas', 'AMAZON HOME FINDS', ['Chocolate Brown', 'Christmas Decor'], '', 'SHOP THE LIST'),
     'choc-style': ('images/blog/choc-style', 'AMAZON STYLE FINDS', ['Chocolate Brown', 'Fall Outfits'], '', 'SHOP THE LIST'),
+    'glam-living': ('images/blog/glam-living', 'AMAZON HOME FINDS', ['Black & Cream', 'Glam Living Room'], '', 'SHOP THE LIST'),
+    'glam-bedroom': ('images/blog/glam-bedroom', 'AMAZON HOME FINDS', ['Black & White', 'Bedroom Finds'], '', 'SHOP THE LIST'),
+    'accent-wall': ('images/blog/accent-wall', 'AMAZON HOME FINDS', ['Renter-Friendly', 'Accent Wall'], '', 'SHOP THE LIST'),
+    'glam-bath': ('images/blog/glam-bath', 'AMAZON HOME FINDS', ['Dark Glam', 'Bathroom Upgrades'], '', 'SHOP THE LIST'),
     'vitamins': ('images/blog/vitamins', 'AMAZON WELLNESS FINDS', ['Vitamins for Women', 'in Their 30s'], '', 'SHOP THE LIST'),
 }
 
