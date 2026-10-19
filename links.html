@@ -52,6 +52,19 @@
   <a href="/free-vault"><small>Free</small>Get The Luxe Gift Vault</a>
 </nav>
 
+<script>
+/* Per-channel Amazon tracking IDs: /links?src=tt (TikTok) | fb (Facebook) | pin (Pinterest) | anything else = web/email */
+(function () {
+  var IDS = { tt: 'luxefindstt-20', fb: 'luxefindsfb-20', pin: 'luxefindspin-20' };
+  var src = (new URLSearchParams(location.search).get('src') || '').toLowerCase();
+  var tag = IDS[src] || 'luxefindsweb-20';
+  document.querySelectorAll('a[href*="amazon.com/shop/"]').forEach(function (a) {
+    var u = new URL(a.href);
+    u.searchParams.set('tag', tag);
+    a.href = u.toString();
+  });
+})();
+</script>
 <footer class="b-foot lk-foot">&copy; Looks Like Luxe &middot; Rich-girl taste, real-girl budget.<br>As an Amazon Associate I earn from qualifying purchases. Prices and availability are shown on Amazon. Product names are trademarks of their owners.<br><a href="/privacy.html">Privacy &amp; disclosure</a></footer>
 </body>
 </html>
